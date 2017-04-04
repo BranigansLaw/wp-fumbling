@@ -1,32 +1,55 @@
 (function($){
-	function floatLabel(inputType){
-		$(inputType).each(function(){
-			var $this = $(this);
-			// on focus add class active to label
-			$this.focus(function(){
-				$this.parent().parent().children("label").addClass("active");
-			});
-			//on blur check field and remove class if needed
-			$this.blur(function(){
-				if($this.val() === '' || $this.val() === 'blank'){
-					$this.parent().parent().children("label").removeClass();
+
+	var analyticsVars = 
+	{
+		ga: null
+	};
+
+	var logConversion = function (formType) {
+		if (typeof analyticsVars.ga == 'function') {
+			analyticsVars.ga('send', 'event', formType, 'Submit');
+		}
+	};
+
+	// just add a class of "floatLabel to the input field!"
+	$(function() {
+		// Look for GA variable
+		analyticsVars.ga = window.ga || null;
+
+		if (typeof analyticsVars.ga != 'function') {
+			console.warn('No Google Analytics object found, or no "push" function in object');
+		}
+
+		$(document).on('submit', '#submissionForm', function(e) {
+
+			e.preventDefault();
+
+			// Some Validation later
+
+			// Stringify Contents
+			var formArray = $(this).serializeArray();
+			var formData = {};
+
+			$.map(formArray, function(n, i){
+		        formData[n['name']] = n['value'];
+		    });
+
+			$.ajax({
+				url : tyfiConsultingLeadPages.ajaxUrl,
+				type : 'post',
+				data : {
+					action : 'tyfi_consulting_post_lead_conversion',
+					form_data : JSON.stringify( formData )
+				},
+				success : function( response ) {
+					alert(response)
 				}
 			});
 
-			// set first null element to blank if exists
-			if (this.type == 'select-one') {
-				$this.find('option[value=""]').text('');
-			}
-			else {
-				// If items other than selects have their labels clicked, focus on the element
-				$this.parent().parent().children("label").click(function() {
-					$(this).parent().find('input, select').focus();
-				});
-			}
+			// Which form? Find from the post_id
+			logConversion($('#formType').val());
+
+			return false;
 		});
-	}
-	// just add a class of "floatLabel to the input field!"
-	$(function() {
-		floatLabel(".floatLabel");
 	});
 })(jQuery);

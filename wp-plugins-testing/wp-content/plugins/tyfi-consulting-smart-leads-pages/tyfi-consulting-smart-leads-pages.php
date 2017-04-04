@@ -18,10 +18,21 @@ $MyUpdateChecker = PucFactory::buildUpdateChecker(
 
 
 function tyfi_consulting_smart_leads_pages_enque_scripts() {
-	//wp_enqueue_style('tyfi-consulting-smart-leads-pages-css', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.css', false);
+	wp_enqueue_style('tyfi-consulting-smart-leads-pages-css', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.css', false);
 
-	//wp_enqueue_script('jquery');
-	//wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.js', array('jquery'), false, true );
+    $style = 'bootstrap';
+    if( ( ! wp_style_is( $style, 'queue' ) ) && ( ! wp_style_is( $style, 'done' ) ) ) {
+        //queue up your bootstrap
+        wp_enqueue_style( 'bootstrap-css', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+        wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true, true);
+    }
+
+	wp_enqueue_script('jquery');
+	wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.js', array('jquery'), false, true );
+
+    wp_localize_script( 'tyfi-consulting-smart-leads-pages-js', 'tyfiConsultingLeadPages', array(
+        'ajaxUrl' => admin_url( 'admin-ajax.php' )
+    ));
 }
 
 add_action( 'wp_enqueue_scripts', 'tyfi_consulting_smart_leads_pages_enque_scripts' );
@@ -29,20 +40,49 @@ add_action( 'wp_enqueue_scripts', 'tyfi_consulting_smart_leads_pages_enque_scrip
 function smart_lead_page_template_reg($single) {
     global $post;
 
-    echo "Hello World 2";
+    $path = plugin_dir_path( __FILE__ ) . 'template/single-smart-lead-page.php';
 
-    $path = plugin_dir_url( __FILE__ ) . 'single-smart-lead-page.php';
-    if ($post->post_type == "smart_lead_page"){
-        if(file_exists($path))
+    if ($post->post_type == "smart_lead_page") {
+        if(file_exists($path)) {
             $single = $path;
+        }
     }
     return $single;
 }
 
-echo "Hello World 1";
 add_filter('single_template', 'smart_lead_page_template_reg', 99);
 
-echo var_dump( $wp_filter['single_template'] );
+add_action( 'wp_ajax_nopriv_tyfi_consulting_post_lead_conversion', 'tyfi_consulting_post_conversion' );
+add_action( 'wp_ajax_tyfi_consulting_post_lead_conversion', 'tyfi_consulting_post_conversion' );
+
+function tyfi_consulting_post_conversion() {
+    if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) { 
+        $formData = json_decode( stripslashes( $_POST['form_data'] ) );
+
+        $leadPageId = $formData->leadPageId;
+        $emailAddress = $formData->email;
+
+        // Log the conversion
+        $conversions = get_post_meta( $leadPageId, 'conversions', true );
+        $conversions = (!isset($conversions) || is_null($conversions) || !is_array($conversions)) ? array() : $conversions;
+
+        $found = false;
+        foreach ($conversions as $conversion) {
+            if ($conversion->email === $emailAddress) {
+                $found = true;
+                break;
+            }
+        }
+
+        if (!$found) {
+            array_push($conversions, $formData);
+            update_post_meta( $leadPageId, 'conversions', $conversions );
+        }
+    }
+
+    // Send Email
+    die();
+}
 
 /*
 Shortcode Registration
@@ -84,8 +124,9 @@ function create_tyfi_consulting_lead_page_post_type() {
             ),
  
             'public' => true,
+            'publicly_queryable' => true,
             'menu_position' => 15,
-            'supports' => array( 'title' ),
+            'supports' => array( 'title', 'revisions' ),
             'taxonomies' => array( '' ),
             'menu_icon' => null,
             'has_archive' => true
@@ -107,12 +148,36 @@ add_action( 'admin_init', 'smart_lead_pages_my_admin' );
 
 function display_smart_lead_pages_meta_box( $smart_lead_page ) {
     $smart_lead_page_signups_needed = esc_html( get_post_meta( $smart_lead_page->ID, 'num_signups_needed', true ) );
+    $smart_lead_page_conversions = get_post_meta( $smart_lead_page->ID, 'conversions', true );
+    $smart_lead_page_conversions = (!isset($smart_lead_page_conversions) || is_null($smart_lead_page_conversions)) ? array() : $smart_lead_page_conversions;
     ?>
     <table>
         <tr>
             <td style="width: 100%">Number of signups needed before launch</td>
             <td>
                 <input type='number' name='num_signups_needed' id='num_signups_needed' value='<?php echo $smart_lead_page_signups_needed; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%">Conversions #</td>
+            <td>
+                <?php echo count( $smart_lead_page_conversions ); ?>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 100%">Conversions</td>
+            <td>
+                <table>
+                <?php 
+                    foreach ($smart_lead_page_conversions as $conversion) {
+                        ?>
+                            <tr>
+                                <td><?php echo $conversion->email; ?></td>
+                            </tr>
+                        <?php
+                    }
+                ?>
+                </table>
             </td>
         </tr>
     </table>

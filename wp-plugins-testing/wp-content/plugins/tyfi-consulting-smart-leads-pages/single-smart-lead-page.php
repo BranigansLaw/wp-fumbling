@@ -1,4 +1,0 @@
-<?php
-?>
-
-Single Lead Page
