@@ -3,7 +3,7 @@
  * Plugin Name: SMART Leads Pages
  * Plugin URI: http://tyfi.consulting/
  * Description: Create intelligent leads pages that learn.
- * Version: 0.0.1
+ * Version: 0.0.2
  * Author: TyFi Consulting
  * Author URI: http://tyfi.consulting/
  * License: GPL2
@@ -23,8 +23,8 @@ function tyfi_consulting_smart_leads_pages_enque_scripts() {
     $style = 'bootstrap';
     if( ( ! wp_style_is( $style, 'queue' ) ) && ( ! wp_style_is( $style, 'done' ) ) ) {
         //queue up your bootstrap
-        wp_enqueue_style( 'bootstrap-css', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
-        wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true, true);
+        wp_enqueue_style( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' );
+        wp_enqueue_script( 'bootstrap', '//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), true, true);
     }
 
 	wp_enqueue_script('jquery');

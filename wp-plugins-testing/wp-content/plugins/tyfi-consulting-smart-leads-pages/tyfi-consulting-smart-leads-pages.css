@@ -1,4 +1,4 @@
-html.smart-lead-page {
+html.smart-lead-page, html.smart-lead-page body {
   text-align: left;
-  background: white;
+  background-color: white;
 }
