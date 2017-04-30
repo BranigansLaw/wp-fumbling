@@ -18,7 +18,7 @@ $MyUpdateChecker = PucFactory::buildUpdateChecker(
 
 
 function tyfi_consulting_smart_leads_pages_enque_scripts() {
-	wp_enqueue_style('tyfi-consulting-smart-leads-pages-css', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.css', false);
+	wp_enqueue_style('tyfi-consulting-smart-leads-pages-css', plugins_url( 'css/tyfi-consulting-smart-leads-pages.css', __FILE__ ), array(), '1.01', 'all' );
 
     $style = 'bootstrap';
     if( ( ! wp_style_is( $style, 'queue' ) ) && ( ! wp_style_is( $style, 'done' ) ) ) {
@@ -28,7 +28,9 @@ function tyfi_consulting_smart_leads_pages_enque_scripts() {
     }
 
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', '/wp-content/plugins/tyfi-consulting-smart-leads-pages/tyfi-consulting-smart-leads-pages.js', array('jquery'), false, true );
+	wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', plugins_url( 'js/tyfi-consulting-smart-leads-pages.js', __FILE__ ), array('jquery'), '1.01', true);
+
+    wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js');
 
     wp_localize_script( 'tyfi-consulting-smart-leads-pages-js', 'tyfiConsultingLeadPages', array(
         'ajaxUrl' => admin_url( 'admin-ajax.php' )
@@ -36,6 +38,13 @@ function tyfi_consulting_smart_leads_pages_enque_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'tyfi_consulting_smart_leads_pages_enque_scripts' );
+
+function smart_pages_admin_enque_shortcode_ads_scripts() {
+    wp_enqueue_media();
+    wp_enqueue_script( 'shortcode-ads-js', plugins_url( 'js/tyfi-consulting-smart-leads-pages-admin.js', __FILE__ ), array('jquery'), '1.01', true);
+}
+
+add_action( 'admin_enqueue_scripts', 'smart_pages_admin_enque_shortcode_ads_scripts' );
 
 function smart_lead_page_template_reg($single) {
     global $post;
@@ -57,10 +66,21 @@ add_action( 'wp_ajax_tyfi_consulting_post_lead_conversion', 'tyfi_consulting_pos
 
 function tyfi_consulting_post_conversion() {
     if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) { 
+        check_ajax_referer( 'smart_leads_nonce', 'wp_nonce' );
+
         $formData = json_decode( stripslashes( $_POST['form_data'] ) );
 
         $leadPageId = $formData->leadPageId;
         $emailAddress = $formData->email;
+
+        // Get the google recaptcha response
+        $grSiteSecret = get_post_meta( $leadPageId, 'gr_site_secret', true );
+        $grResponse = wp_safe_remote_post( "https://www.google.com/recaptcha/api/siteverify", array( secret => $grSiteSecret, response => $formData->g_recaptcha_response ) );
+
+        if ( ! $grResponse->success ) {
+            http_response_code(400);
+            wp_die();
+        }
 
         // Log the conversion
         $conversions = get_post_meta( $leadPageId, 'conversions', true );
@@ -77,11 +97,14 @@ function tyfi_consulting_post_conversion() {
         if (!$found) {
             array_push($conversions, $formData);
             update_post_meta( $leadPageId, 'conversions', $conversions );
+
+            wp_send_json_success( array( 'form_name' => get_the_title( $leadPageId ) ) );
         }
+
+        // Send Email notification of submission
     }
 
-    // Send Email
-    die();
+    wp_die();
 }
 
 /*
@@ -150,22 +173,65 @@ function display_smart_lead_pages_meta_box( $smart_lead_page ) {
     $smart_lead_page_signups_needed = esc_html( get_post_meta( $smart_lead_page->ID, 'num_signups_needed', true ) );
     $smart_lead_page_conversions = get_post_meta( $smart_lead_page->ID, 'conversions', true );
     $smart_lead_page_conversions = (!isset($smart_lead_page_conversions) || is_null($smart_lead_page_conversions)) ? array() : $smart_lead_page_conversions;
+    $success_message = esc_html( get_post_meta( $smart_lead_page->ID, 'success_message', true ) );
+    $gr_site_key = esc_html( get_post_meta( $smart_lead_page->ID, 'gr_site_key', true ) );
+    $gr_site_secret = esc_html( get_post_meta( $smart_lead_page->ID, 'gr_site_secret', true ) );
+    $background_image_id = esc_html( get_post_meta( $smart_lead_page->ID, 'background_image_id', true ) );
+    $logo_image_id = esc_html( get_post_meta( $smart_lead_page->ID, 'logo_image_id', true ) );
     ?>
     <table>
         <tr>
-            <td style="width: 100%">Number of signups needed before launch</td>
+            <td>Number of signups needed before launch</td>
             <td>
                 <input type='number' name='num_signups_needed' id='num_signups_needed' value='<?php echo $smart_lead_page_signups_needed; ?>'>
             </td>
         </tr>
         <tr>
-            <td style="width: 100%">Conversions #</td>
+            <td>Success Message</td>
+            <td>
+                <input type='text' name='success_message' id='success_message' value='<?php echo $success_message; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td>Google Recatcha Site Key</td>
+            <td>
+                <input type='text' name='gr_site_key' id='gr_site_key' value='<?php echo $gr_site_key; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td>Google Recatcha Site Key</td>
+            <td>
+                <input type='text' name='gr_site_secret' id='gr_site_secret' value='<?php echo $gr_site_secret; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td>Background Image '<?php echo $background_image_id ?>'</td>
+            <td>
+                <img id='background-image-preview' src='<?php echo wp_get_attachment_url( $background_image_id ) ?>'>
+            </td>
+            <td>
+                <input type="button" class="button upload_image_button" data-meta-data-id="background_image_id" data-image-preview-id="background-image-preview" value="<?php _e( 'Upload image' ); ?>" />
+                <input type='hidden' name='background_image_id' id='background_image_id' value=''>
+            </td>
+        </tr>
+        <tr>
+            <td>Logo Image '<?php echo $logo_image_id ?>'</td>
+            <td>
+                <img id='logo-image-preview' src='<?php echo wp_get_attachment_url( $logo_image_id ) ?>'>
+            </td>
+            <td>
+                <input type="button" class="button upload_image_button" data-meta-data-id="logo_image_id" data-image-preview-id="logo-image-preview" value="<?php _e( 'Upload image' ); ?>" />
+                <input type='hidden' name='logo_image_id' id='logo_image_id' value=''>
+            </td>
+        </tr>
+        <tr>
+            <td >Conversions #</td>
             <td>
                 <?php echo count( $smart_lead_page_conversions ); ?>
             </td>
         </tr>
         <tr>
-            <td style="width: 100%">Conversions</td>
+            <td>Conversions</td>
             <td>
                 <table>
                 <?php 
@@ -190,6 +256,26 @@ function add_smart_lead_pages_fields( $smart_lead_page_id, $smart_lead_page ) {
         // Store data in post meta table if present in post data
         if ( isset( $_POST['num_signups_needed'] ) && $_POST['num_signups_needed'] != '' ) {
             update_post_meta( $smart_lead_page_id, 'num_signups_needed', $_POST['num_signups_needed'] );
+        }
+
+        if ( isset( $_POST['success_message'] ) && $_POST['success_message'] != '' ) {
+            update_post_meta( $smart_lead_page_id, 'success_message', $_POST['success_message'] );
+        }
+
+         if ( isset( $_POST['gr_site_key'] ) && $_POST['gr_site_key'] != '' ) {
+            update_post_meta( $smart_lead_page_id, 'gr_site_key', $_POST['gr_site_key'] );
+        }
+
+        if ( isset( $_POST['gr_site_secret'] ) && $_POST['gr_site_secret'] != '' ) {
+            update_post_meta( $smart_lead_page_id, 'gr_site_secret', $_POST['gr_site_secret'] );
+        }
+
+        if ( isset( $_POST['background_image_id'] ) && isset( $_POST['background_image_id'] ) && !empty( $_POST['background_image_id'] ) ) {
+            update_post_meta( $smart_lead_page_id, 'background_image_id', absint( $_POST['background_image_id'] ) );
+        }
+
+        if ( isset( $_POST['logo_image_id'] ) && isset( $_POST['logo_image_id'] ) && !empty( $_POST['logo_image_id'] ) ) {
+            update_post_meta( $smart_lead_page_id, 'logo_image_id', absint( $_POST['logo_image_id'] ) );
         }
     }
 }
