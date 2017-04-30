@@ -68,10 +68,11 @@ function tyfi_consulting_post_conversion() {
     if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) { 
         check_ajax_referer( 'smart_leads_nonce', 'wp_nonce' );
 
+        echo $_POST['form_data'];
+
         $formData = json_decode( stripslashes( $_POST['form_data'] ) );
 
         $leadPageId = $formData->leadPageId;
-        $emailAddress = $formData->email;
 
         // Get the google recaptcha response
         $grSiteSecret = get_post_meta( $leadPageId, 'gr_site_secret', true );
@@ -82,29 +83,42 @@ function tyfi_consulting_post_conversion() {
             wp_die();
         }
 
-        // Log the conversion
-        $conversions = get_post_meta( $leadPageId, 'conversions', true );
-        $conversions = (!isset($conversions) || is_null($conversions) || !is_array($conversions)) ? array() : $conversions;
-
-        $found = false;
-        foreach ($conversions as $conversion) {
-            if ($conversion->email === $emailAddress) {
-                $found = true;
-                break;
-            }
-        }
-
-        if (!$found) {
-            array_push($conversions, $formData);
-            update_post_meta( $leadPageId, 'conversions', $conversions );
-
-            wp_send_json_success( array( 'form_name' => get_the_title( $leadPageId ) ) );
+        if ( tyfi_consulting_smart_lead_page_add_lead( $leadPageId, $formData ) ) {
+            //wp_send_json_success( array( 'form_name' => get_the_title( $leadPageId ) ) );
         }
 
         // Send Email notification of submission
     }
 
     wp_die();
+}
+
+function tyfi_consulting_smart_lead_page_add_lead( $leadPageId, $lead ) {
+    // Log the conversion
+    $conversions = get_post_meta( $leadPageId, 'conversions', true );
+    $conversions = ( isset( $conversions ) && !is_null( $conversions ) && is_array( $conversions )) ? $conversions : array();
+
+    $found = false;
+    
+    foreach ($conversions as $conversion) {
+        if ( is_object( $conversion ) && property_exists( $conversion, 'email' ) && $conversion->email === $lead->email) {
+            $found = true;
+            break;
+        }
+    }
+
+    if ( !$found && is_object( $lead ) && isset( $lead->email ) ) {
+        echo 'here';
+
+        unset( $lead->wp_nonce );
+        unset( $lead->g_recaptcha_response );
+        
+        // Change this later for extra form data, you need to remove nonce and google recaptcha
+        array_push( $conversions, $lead );
+        update_post_meta( $leadPageId, 'conversions', $conversions );
+    }
+
+    return $found;
 }
 
 /*
@@ -170,9 +184,13 @@ function smart_lead_pages_my_admin() {
 add_action( 'admin_init', 'smart_lead_pages_my_admin' );
 
 function display_smart_lead_pages_meta_box( $smart_lead_page ) {
+    $leadJson = "{\"email\":\"gdfgj@ksdjf\",\"g-recaptcha-response\":\"03AIezHSbJw0yYVXcRR2nXnGQZrDWdL5Bt99Af5Ye_QSRVhovbHpkBAf79oFCRIf6o5NY0wx4psKw8vkJ1SPl8JmY1uqR2aKQrokMU-jv8gu5P1FAT_Nd1u_yRya2pcpA54GIIjlfwjfFOmKYNB5DKHaW-npcZZHUNxkmPQt59Rr9H6X3kAazfmROhtyplDBgowhY0kyIhUTMT_VMtIch8yLQczXqu0Gz-zVLy_RVPENQDC8dIymYraQ-yW2YJz6H0ja_alJEPImL1BJD8I_1J3-LvmUvCvyyPlRAXugP1y6DT5d1t667BkMtsGCLn8DGJ9m6F9gJ-Sa_D8p2qAAmM4CT2YrwEHEG7kY4MPpCxvMWshPSW-5On15Q\",\"leadPageId\":\"21\",\"wp_nonce\":\"ba88a5b216\"}";
+    $lead = json_decode( stripslashes( $leadJson ) );
+    tyfi_consulting_smart_lead_page_add_lead( $smart_lead_page->ID, $lead );
+
     $smart_lead_page_signups_needed = esc_html( get_post_meta( $smart_lead_page->ID, 'num_signups_needed', true ) );
     $smart_lead_page_conversions = get_post_meta( $smart_lead_page->ID, 'conversions', true );
-    $smart_lead_page_conversions = (!isset($smart_lead_page_conversions) || is_null($smart_lead_page_conversions)) ? array() : $smart_lead_page_conversions;
+    $smart_lead_page_conversions = ( isset($smart_lead_page_conversions) && !is_null($smart_lead_page_conversions) && is_array( $smart_lead_page_conversions )) ? $smart_lead_page_conversions : array();
     $success_message = esc_html( get_post_meta( $smart_lead_page->ID, 'success_message', true ) );
     $gr_site_key = esc_html( get_post_meta( $smart_lead_page->ID, 'gr_site_key', true ) );
     $gr_site_secret = esc_html( get_post_meta( $smart_lead_page->ID, 'gr_site_secret', true ) );
