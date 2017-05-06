@@ -60,7 +60,7 @@ if ($lead_page_type === 1) {
 
 <form id="submissionForm" data-toggle="validator" role="form">
 	<div class="form-group">
-		<label for="inputName" class="control-label">Email</label>
+		<label for="email" class="control-label">Email</label>
 		<input type="email" name="email" placeholder="Email" data-error="Please enter a valid email address." required />
 	</div>
 	<div id='recaptcha' class="g-recaptcha" data-sitekey="<?php echo $gr_site_key ?>" data-callback="submitGoogleRecaptcha" data-size="invisible"></div>
@@ -75,6 +75,11 @@ if ($lead_page_type === 1) {
 	<button type="button" class="close" data-dismiss="alert">x</button>
     <strong>Message sent! </strong>
     <?php echo $success_message ?>
+</div>
+
+<div class="alert alert-danger" style="display: none;" id="failure-alert">
+	<button type="button" class="close" data-dismiss="alert">x</button>
+    <strong>Sorry!</strong>Something went wrong. Please try again.
 </div>
 
 <?php wp_footer(); ?>

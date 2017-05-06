@@ -30,6 +30,7 @@
 				form_data : JSON.stringify( formData )
 			},
 			success : function( response ) {
+				
 				$('#submissionForm input:not(input[type=submit],input[type=hidden])').val("");
 
 				$("#success-alert").alert();
@@ -39,6 +40,15 @@
            		
 				// Which form? Find from the post_id
 				logConversion($('input[name=leadPageId]').val());
+
+				grecaptcha.reset();
+			},
+			error: function( response ) {
+
+				$("#failure-alert").alert();
+            	$("#failure-alert").fadeTo(2000, 500).slideUp(500, function(){
+           			$("#failure-alert").slideUp(500);
+           		});
 
 				grecaptcha.reset();
 			}

@@ -28,7 +28,7 @@ function tyfi_consulting_smart_leads_pages_enque_scripts() {
     }
 
 	wp_enqueue_script('jquery');
-	wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', plugins_url( 'js/tyfi-consulting-smart-leads-pages.js', __FILE__ ), array('jquery'), '1.01', true);
+	wp_enqueue_script( 'tyfi-consulting-smart-leads-pages-js', plugins_url( 'js/tyfi-consulting-smart-leads-pages.js', __FILE__ ), array('jquery'), '1.02', true);
 
     wp_enqueue_script( 'google-recaptcha', 'https://www.google.com/recaptcha/api.js');
 
@@ -68,23 +68,23 @@ function tyfi_consulting_post_conversion() {
     if ( defined( 'DOING_AJAX' ) && DOING_AJAX ) { 
         check_ajax_referer( 'smart_leads_nonce', 'wp_nonce' );
 
-        echo $_POST['form_data'];
-
         $formData = json_decode( stripslashes( $_POST['form_data'] ) );
 
         $leadPageId = $formData->leadPageId;
 
         // Get the google recaptcha response
         $grSiteSecret = get_post_meta( $leadPageId, 'gr_site_secret', true );
-        $grResponse = wp_safe_remote_post( "https://www.google.com/recaptcha/api/siteverify", array( secret => $grSiteSecret, response => $formData->g_recaptcha_response ) );
+        $grRequest = array( body => array( secret => $grSiteSecret, response => $formData->{"g-recaptcha-response"} ) ) ;
 
-        if ( ! $grResponse->success ) {
-            http_response_code(400);
-            wp_die();
+        $grResponse = wp_safe_remote_post( "https://www.google.com/recaptcha/api/siteverify", $grRequest );
+        $grResponseJson = json_decode( wp_remote_retrieve_body( $grResponse ), true );
+
+        if ( ! $grResponseJson['success'] ) {
+            wp_die( 'ReCaptcha Failed', 'ReCaptcha Failed', 400 );
         }
 
         if ( tyfi_consulting_smart_lead_page_add_lead( $leadPageId, $formData ) ) {
-            //wp_send_json_success( array( 'form_name' => get_the_title( $leadPageId ) ) );
+            wp_send_json_success( array( 'form_name' => get_the_title( $leadPageId ) ) );
         }
 
         // Send Email notification of submission
@@ -108,7 +108,6 @@ function tyfi_consulting_smart_lead_page_add_lead( $leadPageId, $lead ) {
     }
 
     if ( !$found && is_object( $lead ) && isset( $lead->email ) ) {
-        echo 'here';
 
         unset( $lead->wp_nonce );
         unset( $lead->g_recaptcha_response );
@@ -184,7 +183,7 @@ function smart_lead_pages_my_admin() {
 add_action( 'admin_init', 'smart_lead_pages_my_admin' );
 
 function display_smart_lead_pages_meta_box( $smart_lead_page ) {
-    $leadJson = "{\"email\":\"gdfgj@ksdjf\",\"g-recaptcha-response\":\"03AIezHSbJw0yYVXcRR2nXnGQZrDWdL5Bt99Af5Ye_QSRVhovbHpkBAf79oFCRIf6o5NY0wx4psKw8vkJ1SPl8JmY1uqR2aKQrokMU-jv8gu5P1FAT_Nd1u_yRya2pcpA54GIIjlfwjfFOmKYNB5DKHaW-npcZZHUNxkmPQt59Rr9H6X3kAazfmROhtyplDBgowhY0kyIhUTMT_VMtIch8yLQczXqu0Gz-zVLy_RVPENQDC8dIymYraQ-yW2YJz6H0ja_alJEPImL1BJD8I_1J3-LvmUvCvyyPlRAXugP1y6DT5d1t667BkMtsGCLn8DGJ9m6F9gJ-Sa_D8p2qAAmM4CT2YrwEHEG7kY4MPpCxvMWshPSW-5On15Q\",\"leadPageId\":\"21\",\"wp_nonce\":\"ba88a5b216\"}";
+    $leadJson = "{\"email\":\"gdfgj@face.com\",\"g-recaptcha-response\":\"03AIezHSbJw0yYVXcRR2nXnGQZrDWdL5Bt99Af5Ye_QSRVhovbHpkBAf79oFCRIf6o5NY0wx4psKw8vkJ1SPl8JmY1uqR2aKQrokMU-jv8gu5P1FAT_Nd1u_yRya2pcpA54GIIjlfwjfFOmKYNB5DKHaW-npcZZHUNxkmPQt59Rr9H6X3kAazfmROhtyplDBgowhY0kyIhUTMT_VMtIch8yLQczXqu0Gz-zVLy_RVPENQDC8dIymYraQ-yW2YJz6H0ja_alJEPImL1BJD8I_1J3-LvmUvCvyyPlRAXugP1y6DT5d1t667BkMtsGCLn8DGJ9m6F9gJ-Sa_D8p2qAAmM4CT2YrwEHEG7kY4MPpCxvMWshPSW-5On15Q\",\"leadPageId\":\"21\",\"wp_nonce\":\"ba88a5b216\"}";
     $lead = json_decode( stripslashes( $leadJson ) );
     tyfi_consulting_smart_lead_page_add_lead( $smart_lead_page->ID, $lead );
 
