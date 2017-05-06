@@ -3,7 +3,7 @@
  * Plugin Name: SMART Leads Pages
  * Plugin URI: http://tyfi.consulting/
  * Description: Create intelligent leads pages that learn.
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: TyFi Consulting
  * Author URI: http://tyfi.consulting/
  * License: GPL2
