@@ -28,6 +28,15 @@ $gr_site_key = esc_html( get_post_meta( $leadPageId, 'gr_site_key', true ) );
 
 $background_image_id = esc_html( get_post_meta( $leadPageId, 'background_image_id', true ) );
 $logo_image_id = esc_html( get_post_meta( $leadPageId, 'logo_image_id', true ) );
+
+$formFirst = false;
+
+$formContainerClass = "col-md-6";
+$pitchContainerClass = "col-md-6";
+if ( $formFirst ) {
+	$formContainerClass .= " col-md-pull-6";
+	$pitchContainerClass .= " col-md-push-6";
+}
 ?>
 
 Single Lead Page: <?php $leadPageId; ?>
@@ -56,30 +65,35 @@ if ($lead_page_type === 1) {
 <?php endif; ?>
 
 <img src="<?php echo wp_get_attachment_url( $background_image_id ) ?>" />
-<img src="<?php echo wp_get_attachment_url( $logo_image_id ) ?>" />
 
-<form id="submissionForm" data-toggle="validator" role="form">
-	<div class="form-group">
-		<label for="email" class="control-label">Email</label>
-		<input type="email" name="email" placeholder="Email" data-error="Please enter a valid email address." required />
-	</div>
-	<div id='recaptcha' class="g-recaptcha" data-sitekey="<?php echo $gr_site_key ?>" data-callback="submitGoogleRecaptcha" data-size="invisible"></div>
-	<div class="form-group">
-		<input class="btn btn-primary" type="submit" />
-	</div>
-	<input type="hidden" name="leadPageId" value="<?php echo $leadPageId ?>" />
-	<input type="hidden" name="wp_nonce" value="<?php echo wp_create_nonce( 'smart_leads_nonce' ) ?>" />
-</form>
-
-<div class="alert alert-success" style="display: none;" id="success-alert">
-	<button type="button" class="close" data-dismiss="alert">x</button>
-    <strong>Message sent! </strong>
-    <?php echo $success_message ?>
+<div class="pitch-container <?php echo $pitchContainerClass ?>">
+	<img src="<?php echo wp_get_attachment_url( $logo_image_id ) ?>" />
 </div>
 
-<div class="alert alert-danger" style="display: none;" id="failure-alert">
-	<button type="button" class="close" data-dismiss="alert">x</button>
-    <strong>Sorry!</strong>Something went wrong. Please try again.
+<div class="form-container <?php echo $formContainerClass ?>">
+	<form id="submissionForm" data-toggle="validator" role="form">
+		<div class="form-group">
+			<label for="email" class="control-label">Email</label>
+			<input type="email" name="email" placeholder="Email" data-error="Please enter a valid email address." required />
+		</div>
+		<div id='recaptcha' class="g-recaptcha" data-sitekey="<?php echo $gr_site_key ?>" data-callback="submitGoogleRecaptcha" data-size="invisible"></div>
+		<div class="form-group">
+			<input class="btn btn-primary" type="submit" />
+		</div>
+		<input type="hidden" name="leadPageId" value="<?php echo $leadPageId ?>" />
+		<input type="hidden" name="wp_nonce" value="<?php echo wp_create_nonce( 'smart_leads_nonce' ) ?>" />
+	</form>
+
+	<div class="alert alert-success" style="display: none;" id="success-alert">
+		<button type="button" class="close" data-dismiss="alert">x</button>
+	    <strong>Message sent! </strong>
+	    <?php echo $success_message ?>
+	</div>
+
+	<div class="alert alert-danger" style="display: none;" id="failure-alert">
+		<button type="button" class="close" data-dismiss="alert">x</button>
+	    <strong>Sorry!</strong>Something went wrong. Please try again.
+	</div>
 </div>
 
 <?php wp_footer(); ?>

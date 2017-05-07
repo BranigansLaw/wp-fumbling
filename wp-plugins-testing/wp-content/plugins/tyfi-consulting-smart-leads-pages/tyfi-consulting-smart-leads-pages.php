@@ -183,9 +183,6 @@ function smart_lead_pages_my_admin() {
 add_action( 'admin_init', 'smart_lead_pages_my_admin' );
 
 function display_smart_lead_pages_meta_box( $smart_lead_page ) {
-    $leadJson = "{\"email\":\"gdfgj@face.com\",\"g-recaptcha-response\":\"03AIezHSbJw0yYVXcRR2nXnGQZrDWdL5Bt99Af5Ye_QSRVhovbHpkBAf79oFCRIf6o5NY0wx4psKw8vkJ1SPl8JmY1uqR2aKQrokMU-jv8gu5P1FAT_Nd1u_yRya2pcpA54GIIjlfwjfFOmKYNB5DKHaW-npcZZHUNxkmPQt59Rr9H6X3kAazfmROhtyplDBgowhY0kyIhUTMT_VMtIch8yLQczXqu0Gz-zVLy_RVPENQDC8dIymYraQ-yW2YJz6H0ja_alJEPImL1BJD8I_1J3-LvmUvCvyyPlRAXugP1y6DT5d1t667BkMtsGCLn8DGJ9m6F9gJ-Sa_D8p2qAAmM4CT2YrwEHEG7kY4MPpCxvMWshPSW-5On15Q\",\"leadPageId\":\"21\",\"wp_nonce\":\"ba88a5b216\"}";
-    $lead = json_decode( stripslashes( $leadJson ) );
-    tyfi_consulting_smart_lead_page_add_lead( $smart_lead_page->ID, $lead );
 
     $smart_lead_page_signups_needed = esc_html( get_post_meta( $smart_lead_page->ID, 'num_signups_needed', true ) );
     $smart_lead_page_conversions = get_post_meta( $smart_lead_page->ID, 'conversions', true );
@@ -216,7 +213,7 @@ function display_smart_lead_pages_meta_box( $smart_lead_page ) {
             </td>
         </tr>
         <tr>
-            <td>Google Recatcha Site Key</td>
+            <td>Google Recatcha Secret Key</td>
             <td>
                 <input type='text' name='gr_site_secret' id='gr_site_secret' value='<?php echo $gr_site_secret; ?>'>
             </td>
