@@ -3,7 +3,7 @@
  * Plugin Name: SMART Leads Pages
  * Plugin URI: http://tyfi.consulting/
  * Description: Create intelligent leads pages that learn.
- * Version: 0.0.3
+ * Version: 0.0.4
  * Author: TyFi Consulting
  * Author URI: http://tyfi.consulting/
  * License: GPL2
@@ -192,6 +192,8 @@ function display_smart_lead_pages_meta_box( $smart_lead_page ) {
     $gr_site_secret = esc_html( get_post_meta( $smart_lead_page->ID, 'gr_site_secret', true ) );
     $background_image_id = esc_html( get_post_meta( $smart_lead_page->ID, 'background_image_id', true ) );
     $logo_image_id = esc_html( get_post_meta( $smart_lead_page->ID, 'logo_image_id', true ) );
+    $pitch_title = esc_html( get_post_meta( $smart_lead_page->ID, 'pitch_title', true ) );
+    $short_pitch = esc_html( get_post_meta( $smart_lead_page->ID, 'short_pitch', true ) );
     ?>
     <table>
         <tr>
@@ -216,6 +218,18 @@ function display_smart_lead_pages_meta_box( $smart_lead_page ) {
             <td>Google Recatcha Secret Key</td>
             <td>
                 <input type='text' name='gr_site_secret' id='gr_site_secret' value='<?php echo $gr_site_secret; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td>Pitch Title</td>
+            <td>
+                <input type='text' name='pitch_title' id='pitch_title' value='<?php echo $pitch_title; ?>'>
+            </td>
+        </tr>
+        <tr>
+            <td>Short Pitch</td>
+            <td>
+                <input type='text' name='short_pitch' id='short_pitch' value='<?php echo $short_pitch; ?>'>
             </td>
         </tr>
         <tr>
@@ -290,6 +304,14 @@ function add_smart_lead_pages_fields( $smart_lead_page_id, $smart_lead_page ) {
 
         if ( isset( $_POST['logo_image_id'] ) && isset( $_POST['logo_image_id'] ) && !empty( $_POST['logo_image_id'] ) ) {
             update_post_meta( $smart_lead_page_id, 'logo_image_id', absint( $_POST['logo_image_id'] ) );
+        }
+
+        if ( isset( $_POST['pitch_title'] ) && isset( $_POST['pitch_title'] ) && !empty( $_POST['pitch_title'] ) ) {
+            update_post_meta( $smart_lead_page_id, 'pitch_title', $_POST['pitch_title'] );
+        }
+
+        if ( isset( $_POST['short_pitch'] ) && isset( $_POST['short_pitch'] ) && !empty( $_POST['short_pitch'] ) ) {
+            update_post_meta( $smart_lead_page_id, 'short_pitch', $_POST['short_pitch'] );
         }
     }
 }

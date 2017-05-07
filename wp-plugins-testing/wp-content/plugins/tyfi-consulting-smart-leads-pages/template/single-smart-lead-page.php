@@ -29,6 +29,9 @@ $gr_site_key = esc_html( get_post_meta( $leadPageId, 'gr_site_key', true ) );
 $background_image_id = esc_html( get_post_meta( $leadPageId, 'background_image_id', true ) );
 $logo_image_id = esc_html( get_post_meta( $leadPageId, 'logo_image_id', true ) );
 
+$pitch_title = esc_html( get_post_meta( $leadPageId, 'pitch_title', true ) );
+$short_pitch = esc_html( get_post_meta( $leadPageId, 'short_pitch', true ) );
+
 $formFirst = false;
 
 $formContainerClass = "col-md-6";
@@ -67,6 +70,8 @@ if ($lead_page_type === 1) {
 <img src="<?php echo wp_get_attachment_url( $background_image_id ) ?>" />
 
 <div class="pitch-container <?php echo $pitchContainerClass ?>">
+	<h1><?php echo $pitch_title ?></h1>
+	<p><?php echo $short_pitch ?></p>
 	<img src="<?php echo wp_get_attachment_url( $logo_image_id ) ?>" />
 </div>
 
