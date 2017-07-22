@@ -139,6 +139,107 @@ function shortcode_ad_shortcode( $atts ) {
 }
 */
 
+/* Endpoints */
+class SMART_Leads_Pages_V1_REST_Test_Controller extends WP_REST_Controller {
+ 
+  /**
+   * Register the routes for the objects of the controller.
+   */
+  public function register_routes() {
+    $version = '1';
+    $namespace = 'smart-lead-pages/v' . $version;
+    $base = 'test-api-endpoint';
+    register_rest_route( $namespace, '/' . $base . '/(?P<value>[\d]+)', array(
+      array(
+        'methods'         => WP_REST_Server::READABLE,
+        'callback'        => array( $this, 'get_item' ),
+        'permission_callback' => array( $this, 'get_item_permissions_check' ),
+        'args'            => array(
+          'context'          => array(
+            'default'      => 'view',
+          ),
+        ),
+      ),
+    ) );
+    register_rest_route( $namespace, '/' . $base . '/schema', array(
+      'methods'         => WP_REST_Server::READABLE,
+      'callback'        => array( $this, 'get_public_item_schema' ),
+    ) );
+  }
+ 
+  /**
+   * Get one item from the collection
+   *
+   * @param WP_REST_Request $request Full data about the request.
+   * @return WP_Error|WP_REST_Response
+   */
+  public function get_item( $request ) {
+      
+      $result = wp_remote_post( 'https://smartleadpagesapi.azurewebsites.net/api/Result/SubmitResult', array( 
+                'method' => 'POST',
+                'body' =>  json_encode( $request->get_param( 'value' ) ) 
+            )
+          );
+ 
+    //return a response or error based on some conditional
+      if ( !is_wp_error($result) ) {
+      return new WP_REST_Response( array(), 200 );
+    }else{
+      return new WP_Error( 400, __( 'message', 'text-domain' ) );
+    }
+  }
+
+  /**
+   * Check if a given request has access to get a specific item
+   *
+   * @param WP_REST_Request $request Full data about the request.
+   * @return WP_Error|bool
+   */
+  public function get_item_permissions_check( $request ) {
+    return $this->get_items_permissions_check( $request );
+  }
+
+  public function get_items_permissions_check( $request ) {
+    return true; //<--use to make readable by all
+   //return current_user_can( 'edit_something' );
+  }
+
+  /**
+   * Get the query params for collections
+   *
+   * @return array
+   */
+  public function get_collection_params() {
+    return array(
+      'page'     => array(
+        'description'        => 'Current page of the collection.',
+        'type'               => 'integer',
+        'default'            => 1,
+        'sanitize_callback'  => 'absint',
+      ),
+      'per_page' => array(
+        'description'        => 'Maximum number of items to be returned in result set.',
+        'type'               => 'integer',
+        'default'            => 10,
+        'sanitize_callback'  => 'absint',
+      ),
+      'search'   => array(
+        'description'        => 'Limit results to those matching a string.',
+        'type'               => 'string',
+        'sanitize_callback'  => 'sanitize_text_field',
+      ),
+    );
+  }
+}
+ 
+// Function to register our new routes from the controller.
+function prefix_register_smart_leads_pages_rest_api() {
+    $controller = new SMART_Leads_Pages_V1_REST_Test_Controller();
+    $controller->register_routes();
+}
+ 
+add_action( 'rest_api_init', 'prefix_register_smart_leads_pages_rest_api' );
+//add_action( 'rest_api_init', new SMART_Leads_Pages_Test_V1_REST_Posts_Controller() );
 
 function create_tyfi_consulting_lead_page_post_type() {
     register_post_type( 'smart_lead_page',
