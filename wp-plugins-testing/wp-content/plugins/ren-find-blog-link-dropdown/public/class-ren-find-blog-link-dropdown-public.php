@@ -23,6 +23,11 @@
 class Ren_Find_Blog_Link_Dropdown_Public {
 
 	/**
+	 * The tags that this plugin will display
+	 */
+	private $tags;
+
+	/**
 	 * The ID of this plugin.
 	 *
 	 * @since    1.0.0
@@ -51,6 +56,7 @@ class Ren_Find_Blog_Link_Dropdown_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
+		$this->tags = array( 'Select city', 'Edmonton', 'Calgary' );
 
 	}
 
@@ -98,6 +104,25 @@ class Ren_Find_Blog_Link_Dropdown_Public {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/ren-find-blog-link-dropdown-public.js', array( 'jquery' ), $this->version, false );
 
+	}
+
+	public function blog_select_shortcode( $attrs ) {
+
+		$selectOptions = '';
+		foreach ( $this->tags as $tag ) {
+			$tagObj = get_term_by( 'name', $tag, 'post_tag' );
+
+			if ( $tagObj ) {
+				$tagLink = get_tag_link( $tagObj->term_id );
+
+				$selectOptions .= '<option value="' . $tagLink . '">' . $tag . '</option>';
+			}
+			else {
+				$selectOptions .= '<option>' . $tag . '</option>';
+			}
+		}
+
+		return '<select id="BlogLinks">' . $selectOptions . '</select>';
 	}
 
 }
