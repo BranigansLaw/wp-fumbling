@@ -1,0 +1,30 @@
+/*
+ Theme Name:   Renovation Find Blog
+ Theme URI:    http://tyficonsulting.com/
+ Description:  Renovation Find Blog inheriting from Biscaya
+ Author:       Tyler Findlay
+ Author URI:   http://tyficonsulting.com
+ Template:     Biscaya
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         RenovationFind
+ Text Domain:  renovationfindchildtheme
+*/
+
+@media screen and (min-width: 601px) {
+	.navbar-brand {
+		float: none;
+	    display: inline-block;
+	}
+
+	.header-shortcode-box {
+	    display: inline-block;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.header-shortcode-box {
+	    display: none;
+	}
+}

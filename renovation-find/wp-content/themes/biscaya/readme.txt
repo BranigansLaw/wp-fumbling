@@ -1,0 +1,24 @@
+March 26, 2014
+Biscaya 2.0 Release Notes
+- Upgraded to Bootstrap 3.0 +
+- Upgraded to Font Awesome 4.0.3
+- New level menu added
+- New shortcodes added
+   - fancy boxes 3
+   - new call to action area
+   - content slider
+   - added feature for buttons to open in a new tab
+- Theme options framework changed to a more friendly one
+- New theme options: 
+    - Google font library for body text added
+    - option to change body font size 
+	- option to change body text color
+	- backup, restore or import theme options data between different installs
+- New portfolio layouts added (single column, two columns, three columns, four columns)
+- Removed "homepage" template, added "no title" template page instead (select this for homepage)
+- Nicescroll feature added
+- Automatic Theme Updater added
+- Translation updated
+- Documentation updated
+- IE8 no longer supported
+---------------------------

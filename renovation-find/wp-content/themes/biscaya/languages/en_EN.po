@@ -1,0 +1,231 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: Biscaya2.0\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: WowThemesNet <wowthemesnet@gmail.com>\n"
+"Language-Team: WowThemes.net <wowthemesnet@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Language: en\n"
+"X-Generator: Poedit 1.6.4\n"
+
+#. Text in echo
+#: 404.php:16
+msgid "Please, visit our homepage, try a new search or contact us."
+msgstr "Please, visit our homepage, try a new search or contact us."
+
+#. Text in echo
+#: 404.php:13
+msgid "The requested page could not be found"
+msgstr "The requested page could not be found"
+
+#. Text in echo
+#: archive.php:63
+msgid "Asides"
+msgstr "Asides"
+
+#. Text in function
+#: archive.php:63
+msgid "Author: %s"
+msgstr "Author: %s"
+
+#. Text in echo
+#: archive.php:63
+msgid "Images"
+msgstr "Images"
+
+#. Text in echo
+#: archive.php:63
+msgid "Links"
+msgstr "Links"
+
+#. Text in echo
+#: archive.php:63
+msgid "Quotes"
+msgstr "Quotes"
+
+#. Text in echo
+#: archive.php:63
+msgid "Videos"
+msgstr "Videos"
+
+#. Text in function
+#: comments.php:47
+msgid "Add Comment"
+msgstr "Add Comment"
+
+#. Text in function
+#: comments.php:47
+msgid "Cancel Reply"
+msgstr "Cancel Reply"
+
+#. Text in function
+#: comments.php:47
+msgid "Comment"
+msgstr "Comment"
+
+#. Text in echo
+#: comments.php:44
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#. Text in function
+#: comments.php:47
+msgid "E-mail Address"
+msgstr "E-mail Address"
+
+#. Text in function
+#: comments.php:47
+msgid "Leave a Reply to %s"
+msgstr "Leave a Reply to %s"
+
+#. Text in function
+#: comments.php:47
+msgid ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+msgstr ""
+"Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of "
+"this account\">Log out?</a>"
+
+#. Text in function
+#: comments.php:47
+msgid "Name"
+msgstr "Name"
+
+#. Text in function
+#: comments.php:47
+msgid "Post a Question"
+msgstr "Post a Question"
+
+#. Text in function
+#: comments.php:47
+msgid "Required fields are marked *. Your email address will not be published."
+msgstr ""
+"Required fields are marked *. Your email address will not be published."
+
+#. Text in function
+#: comments.php:47
+msgid "Website"
+msgstr "Website"
+
+#. Text in function
+#: comments.php:47
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "You must be <a href=\"%s\">logged in</a> to post a comment."
+
+#. Text in function
+#: comments.php:47
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+
+#. Text in function
+#: content-single.php:39
+msgid "% Comments"
+msgstr "% Comments"
+
+#. Text in function
+#: content-single.php:39
+msgid "1 Comment"
+msgstr "1 Comment"
+
+#. Text in function
+#: content-single.php:39
+msgid "Comments off"
+msgstr "Comments off"
+
+#. Text in function
+#: content-single.php:45
+msgid "Edit this post"
+msgstr "Edit this post"
+
+#. Text in function
+#: content-single.php:39
+msgid "Leave a Comment"
+msgstr "Leave a Comment"
+
+#. Text in function
+#: content-single.php:29
+msgid "Pages:"
+msgstr "Pages:"
+
+#. Text in function
+#: functions.php:263
+msgid "%s <span class=\"says\"></span>"
+msgstr "%s <span class=\"says\"></span>"
+
+#. Text in function
+#: functions.php:176
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Older posts"
+
+#. Text in function
+#: functions.php:179
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+
+#. Text in echo
+#: functions.php:255
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#. Text in echo
+#: functions.php:277
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#. Text in echo
+#: no-results.php:31
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+
+#. Text in echo
+#: no-results.php:14
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#. Text in function
+#: no-results.php:20
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#. Text in echo
+#: no-results.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+
+#. Text in function
+#: search.php:12
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#. Text in function
+#: sendmail.php:1
+msgid "All fields are required."
+msgstr "All fields are required."
+
+#. Text in echo
+#: sidebar.php:15
+msgid "Archives"
+msgstr "Archives"
+
+#. Text in echo
+#: sidebar.php:22
+msgid "Meta"
+msgstr "Meta"

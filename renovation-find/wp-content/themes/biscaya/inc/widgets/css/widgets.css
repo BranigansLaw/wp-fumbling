@@ -1,0 +1,113 @@
+/* Widget-Tabbed*/
+.multi-sidebar a {
+color:#777;
+}
+.multi-sidebar li {
+margin-bottom:15px;
+}
+.multi-sidebar-container .entry-title{
+font-weight:700;
+font-size:14px;
+}
+.multi-sidebar-container  small{
+font-style:italic;
+color:#999;
+}
+.multi-sidebar-container .widget ul {
+padding: 0;
+border: 0;
+
+}
+
+.hide,.ui-tabs-hide {
+display:none;
+}
+.multi-sidebar .tabs {
+list-style:none;
+margin:0;
+padding:0;
+overflow:hidden;
+border-bottom:0px;
+background:#333;
+margin-top: -16px;
+margin-left: -16px;
+margin-right: -16px;
+margin-bottom: 13px;
+}
+.multi-sidebar .tabs li {
+float:left;
+margin:0 .25em -0.20px 0;
+}
+.multi-sidebar .widget {
+margin:0 0 1.5em;
+border-top:0;
+}
+
+.multi-sidebar .widget ul,ul.featured-stories,ul.related-posts {
+list-style:none;
+margin:0;
+}
+.multi-sidebar .widget li,.featured-stories li,.related-posts li {
+border-bottom:1px dotted #ddd;
+padding: 10px 8px 15px;
+clear:both;
+}
+.multi-sidebar .widget li:last-child {
+border-bottom:0;
+padding-bottom: 0;
+margin-bottom: 0;
+}
+.multi-sidebar .entry-thumbnail,.featured-stories .entry-thumbnail {
+float:left;
+margin:0;
+padding:2px;
+line-height:1;
+
+}
+.multi-sidebar .entry-thumbnail img,.multi-sidebar .recentcomments .avatar img,.featured-stories .entry-thumbnail img {
+width: 70px;
+height: 55px;
+float: none;
+border: 1px solid #ddd;
+padding: 4px;
+margin-right: 10px;
+margin-top: 5px;
+}
+.multi-sidebar .recentcomments .avatar {
+float:left;
+border:1px solid #CCC;
+margin:0 10px 0 0;
+background:#FFF;
+padding:2px;
+line-height:1;
+}
+.multi-sidebar .recentcomments .avatar img {
+width:36px;
+height:auto;
+}
+.multi-sidebar .tabs a:link,.multi-sidebar .tabs a:visited {
+font-size:13px;
+color:#fff;
+text-decoration:none;
+padding:8px 9px;
+display:block;
+text-transform:uppercase;
+font-weight:700;
+}
+.multi-sidebar .tabs a:hover {
+
+}
+.multi-sidebar .tabs .ui-tabs-selected a {
+border-bottom:4px solid #c1c1c1;
+}
+.multi-sidebar .tabs .ui-tabs-selected a:link,.multi-sidebar .tabs .ui-tabs-selected a:visited {
+color:#666;
+}
+.multi-sidebar .entry-author {
+color:#666;
+font-size:90%;
+}
+.ui-tabs-active {
+background: #c1c1c1;
+color: #fff;
+}
