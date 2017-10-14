@@ -24,7 +24,13 @@
 }
 
 @media screen and (max-width: 600px) {
+	.navbar-brand {
+		display: block;
+		float: none;
+	}
+
 	.header-shortcode-box {
-	    display: none;
+	    display: block;
+	    text-align: center;
 	}
 }

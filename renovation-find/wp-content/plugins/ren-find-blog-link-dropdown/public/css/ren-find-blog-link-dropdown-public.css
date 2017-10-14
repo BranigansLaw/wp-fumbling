@@ -8,3 +8,7 @@
     font-size: 1.5em;
     font-weight: 600;
  }
+
+ #BlogLinks:hover {
+ 	cursor: pointer;
+ }
