@@ -56,8 +56,14 @@ class Ren_Find_Blog_Link_Dropdown_Public {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-		$this->tags = array( 'Select city', 'Guest Posts', 'Calgary', 'Edmonton', 'Vancouver', 'Winnipeg' );
-
+		$this->tags = array( 
+			'Select city' => '', 
+			'Guest Posts' => 'guest-posts', 
+			'Calgary' => 'calgary', 
+			'Edmonton' => 'edmonton', 
+			'Vancouver' => 'vancouver', 
+			'Winnipeg' => 'winnipeg'
+		);
 	}
 
 	/**
@@ -109,16 +115,16 @@ class Ren_Find_Blog_Link_Dropdown_Public {
 	public function blog_select_shortcode( $attrs ) {
 
 		$selectOptions = '';
-		foreach ( $this->tags as $tag ) {
+		foreach ( $this->tags as $label => $tag ) {
 			$tagObj = get_term_by( 'name', $tag, 'post_tag' );
 
 			if ( $tagObj ) {
 				$tagLink = get_tag_link( $tagObj->term_id );
 
-				$selectOptions .= '<option value="' . $tagLink . '">' . $tag . '</option>';
+				$selectOptions .= '<option value="' . $tagLink . '">' . $label . '</option>';
 			}
 			else {
-				$selectOptions .= '<option>' . $tag . '</option>';
+				$selectOptions .= '<option>' . $label . '</option>';
 			}
 		}
 

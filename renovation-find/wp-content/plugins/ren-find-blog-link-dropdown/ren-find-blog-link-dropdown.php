@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://tyficonsulting.com/
- * @since             1.0.0
+ * @since             1.0.2
  * @package           Ren_Find_Blog_Link_Dropdown
  *
  * @wordpress-plugin
  * Plugin Name:       RenovationFind Blog Link Dropdown
  * Plugin URI:        https://tyficonsulting.com/service/create-custom-wordpress-plugin/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            TyFi Consulting Inc.
  * Author URI:        https://tyficonsulting.com/
  * License:           GPL-2.0+
@@ -30,7 +30,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'PLUGIN_VERSION', '1.0.1' );
+define( 'PLUGIN_VERSION', '1.0.2' );
 
 /**
  * The code that runs during plugin activation.
