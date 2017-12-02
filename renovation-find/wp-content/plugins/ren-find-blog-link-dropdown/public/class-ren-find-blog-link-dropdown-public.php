@@ -58,7 +58,6 @@ class Ren_Find_Blog_Link_Dropdown_Public {
 		$this->version = $version;
 		$this->tags = array( 
 			'Select city' => '', 
-			'Guest Posts' => 'guest-posts', 
 			'Calgary' => 'calgary', 
 			'Edmonton' => 'edmonton', 
 			'Vancouver' => 'vancouver', 
