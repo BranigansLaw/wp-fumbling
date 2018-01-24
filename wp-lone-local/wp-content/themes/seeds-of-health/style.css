@@ -12,32 +12,114 @@ Text Domain: seeds-of-health-theme
 */
 
 :root{
-	--seeds-green: #F26D26;
-	--seeds-orange: #161717;
-	--seeds-brown: #FFF;
-	--footer-desktop-height: 380px;
+	--seeds-green: #737144;
+	--seeds-orange: #EBD7BB;
+	--seeds-brown: #B99E7B;
+	--seeds-red: #580058;
+	--seeds-black: #333;
+	--footer-desktop-height: 250px;
 }
 
-/********************** FOOTER ALWAYS ON BOTTOM **********************/
-@media (min-width: 992px) {
-	html, body {
-		height: 100%;
+body {
+	font-family: 'Open Sans', 'Arial';
+}
+
+/******** TOP NAVIGATION ********/
+.navigation-top {
+	background-color: var(--seeds-green);
+	font-family: Fjord One;
+	border: 0;
+	font-size: 1rem;
+	font-size: 12px;
+}
+
+.navigation-top a {
+	color: white;
+	font-weight: 400;
+}
+
+.main-navigation a:hover {
+	color: var(--seeds-orange);
+}
+
+.navigation-top .current-menu-item > a, .navigation-top .current_page_item > a {
+	color: var(--seeds-red);
+}
+
+.navigation-top .sub-menu a {
+	color: var(--seeds-black);
+}
+
+.main-navigation .menu-item-has-children > a > .icon {
+	display: none;
+}
+
+.navigation-top .sub-menu li:hover {
+	background-color: var(--seeds-orange);
+}
+
+/******** SOCIAL NAVIGATION ********/
+footer.site-footer {
+	background-color: var(--seeds-brown);
+	height: var(--footer-desktop-height);
+}
+
+@media screen and (min-width: 48em) {
+	.social-navigation {
+	    clear: initial;
+    	float: initial;
+	    width: initial;
 	}
 
-	.site-content-contain {
-		min-height: 100%;
-		position: relative;
+	.social-navigation + .site-info {
+		margin-left: 0;
 	}
+}
 
-	.site-content {
-		padding-bottom: var(--footer-desktop-height);
-	}
+.social-navigation {
+	text-align: center;
+}
 
-	footer.site-footer {
-		width: 100%;
-		height: var(--footer-desktop-height);
-		position: absolute;
-		left: 0;
-		bottom: 0;
-	}
+.social-navigation a {
+	background-color: var(--seeds-black);
+	position: relative;
+	transition: 0.3s all ease-in-out;
+	top: 0;
+	margin: 0;
+}
+
+.social-navigation li {
+	margin: 1em;
+}
+
+.social-navigation .rainbow {
+	position: relative;
+	top: 10px;
+}
+
+.social-navigation .rainbow img {
+	width: 40px;
+}
+
+.social-navigation a:hover, .social-navigation a:focus {
+	background-color: black;
+	top: -10px;
+}
+
+.site-info {
+    float: initial;
+    padding: initial;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.site-info div {
+	margin: 0.42em 0;
+}
+
+.site-info .footer-page-title {
+	font-size: 1.65em;
+	font-family: Fjord One;
 }
