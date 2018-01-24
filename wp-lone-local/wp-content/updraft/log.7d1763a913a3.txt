@@ -1,0 +1,110 @@
+0000.008 () Opened log file at time: Wed, 24 Jan 2018 00:25:39 +0000 on http://localhost/wp-fumbling/wp-lone-local
+0000.008 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.14.2.1 WP: 4.9.2 PHP: 5.6.25 (apache2handler, Windows NT LAPTOP-EEKB869K 10.0 build 16299 (Windows 10) AMD64) MySQL: 5.7.14 WPLANG: en_CA Server: Apache/2.4.23 (Win64) PHP/5.6.25 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 45.3M | 45.8M) multisite: N openssl: OpenSSL 1.0.1t  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.008 () Free space on disk containing Updraft's temporary directory: 332335.9 MB
+0000.010 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"updraft_restorer_replacesiteurl":"1","updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false}
+0000.064 () Entity: db
+0000.064 () restore_backup(backup_file=backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-db.gz, type=db, info=a:0:{}, last_one=)
+0000.065 () Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-db.gz, 0.2 Mb)
+0000.072 () Database successfully unpacked
+0000.074 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.074 () Using direct MySQL access; value of use_mysqli is: 1
+0000.102 () Max packet size: 32 MB
+0000.102 () Entering maintenance mode
+0000.102 () Enabling Maintenance mode&#8230;
+0000.107 () Backup of: http://seedsofhealth.tyficonsulting.com
+0000.153 () Content URL: http://seedsofhealth.tyficonsulting.com/wp-content
+0000.154 () Uploads URL: http://seedsofhealth.tyficonsulting.com/wp-content/uploads
+0000.154 () Old table prefix: wp_
+0000.154 () Site information: multisite=0
+0000.156 () New table prefix: wp_
+0000.175 () Processing table (MyISAM): wp_options
+0000.268 () Restoring prior UD configuration (table: wp_options; keys: 90)
+0000.493 () Search and replacing table: wp_options: rows: 438
+0000.724 () Processing table (MyISAM): wp_users
+0000.764 () Search and replacing table: wp_users: rows: 1
+0000.765 () Processing table (MyISAM): wp_usermeta
+0000.808 () Search and replacing table: wp_usermeta: rows: 37
+0000.817 () Processing table (MyISAM): wp_commentmeta
+0000.843 () Search and replacing table: wp_commentmeta: rows: 0
+0000.843 () Processing table (MyISAM): wp_comments
+0000.879 () Search and replacing table: wp_comments: rows: 1
+0000.880 () Processing table (MyISAM): wp_links
+0000.917 () Search and replacing table: wp_links: rows: 0
+0000.917 () Processing table (MyISAM): wp_postmeta
+0000.988 () Search and replacing table: wp_postmeta: rows: 3
+0000.990 () Processing table (MyISAM): wp_posts
+0001.031 () Skipping search/replace on GUID column in posts table
+0001.032 () Search and replacing table: wp_posts: rows: 61
+0001.078 () Processing table (MyISAM): wp_term_relationships
+0001.112 () Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0001.112 () Processing table (MyISAM): wp_term_taxonomy
+0001.148 () Search and replacing table: wp_term_taxonomy: rows: 3
+0001.150 () Processing table (MyISAM): wp_termmeta
+0001.174 () Search and replacing table: wp_termmeta: rows: 0
+0001.174 () Processing table (MyISAM): wp_terms
+0001.210 () Search and replacing table: wp_terms: rows: 3
+0001.211 () Processing table (MyISAM): wp_yoast_seo_links
+0001.241 () Search and replacing table: wp_yoast_seo_links: rows: 1
+0001.242 () Processing table (MyISAM): wp_yoast_seo_meta
+0001.264 () Unlocking database and leaving maintenance mode
+0001.264 () Disabling Maintenance mode&#8230;
+0001.278 () Search and replacing table: wp_yoast_seo_meta: rows: 19
+0001.281 () Finished: lines processed: 48 in 1.20 seconds
+0001.282 () Cleaning up rubbish...
+0001.283 () Begin search and replace (updraftplus_restored_db)
+0001.283 () [Database-replace-site-url] Database: search and replace site URL
+0001.284 () Restored pre-migration site ID for this installation
+0001.289 () Warning: the database's site URL (http://localhost/wp-fumbling/wp-lone-local/) is different to what we expected (http://seedsofhealth.tyficonsulting.com)
+0001.290 () Warning: the database's home URL (http://localhost/wp-fumbling/wp-lone-local/) is different to what we expected (http://seedsofhealth.tyficonsulting.com)
+0001.291 () Database search and replace: replace http://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0001.291 () Database search and replace: replace https://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0001.292 () Search and replacing table: wp_commentmeta: already done
+0001.292 () Search and replacing table: wp_comments: already done
+0001.293 () Search and replacing table: wp_links: already done
+0001.293 () Search and replacing table: wp_options: already done
+0001.293 () Search and replacing table: wp_postmeta: already done
+0001.293 () Search and replacing table: wp_posts: already done
+0001.293 () Search and replacing table: wp_term_relationships: already done
+0001.293 () Search and replacing table: wp_term_taxonomy: already done
+0001.294 () Search and replacing table: wp_termmeta: already done
+0001.294 () Search and replacing table: wp_terms: already done
+0001.294 () Search and replacing table: wp_usermeta: already done
+0001.294 () Search and replacing table: wp_users: already done
+0001.294 () Search and replacing table: wp_yoast_seo_links: already done
+0001.294 () Search and replacing table: wp_yoast_seo_meta: already done
+0001.309 () Entity: plugins
+0001.309 () restore_backup(backup_file=backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:58:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0001.309 () Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-plugins.zip, 19.7 Mb)
+0070.671 () Moving old data: filesystem method / updraft_dir is potentially possible
+0070.672 () Moving old data: can potentially use wp_filesystem method / -old
+0070.672 () Moving old data out of the way...
+0071.360 () Top-level entities being moved: akismet, hello.php, index.php, updraftplus
+0071.369 () Moving unpacked backup into place...
+0072.938 () Top-level entities being moved: acf-repeater, advanced-custom-fields, akismet, contact-form-7, custom-post-type-ui, index.php, jetpack, simple-custom-post-order, updraftplus, w3-total-cache, wordpress-seo
+0072.965 () Cleaning up rubbish...
+0072.966 () [W3 Total Cache] Disabled this plugin: %s: re-activate it manually when you are ready.
+0072.971 () Entity: themes
+0072.971 () restore_backup(backup_file=backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-themes.zip, type=themes, info=a:2:{s:4:"path";s:57:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/themes";s:11:"description";s:6:"Themes";}, last_one=)
+0072.971 () Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-themes.zip, 0.9 Mb)
+0073.837 () Moving old data: filesystem method / updraft_dir is potentially possible
+0073.838 () Moving old data: can potentially use wp_filesystem method / -old
+0073.838 () Moving old data out of the way...
+0073.875 () Top-level entities being moved: index.php, twentyfifteen, twentyseventeen, twentysixteen
+0073.880 () Moving unpacked backup into place...
+0073.896 () Top-level entities being moved: index.php, seeds-of-health, twentyseventeen
+0073.901 () Cleaning up rubbish...
+0073.905 () Entity: uploads
+0073.905 () restore_backup(backup_file=backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:58:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0073.905 () Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-uploads.zip, 0 Mb)
+0073.914 () Moving old data: filesystem method / updraft_dir is potentially possible
+0073.915 () Moving old data: can potentially use wp_filesystem method / -old
+0073.915 () Moving old data out of the way...
+0073.917 () Moving unpacked backup into place...
+0073.921 () Cleaning up rubbish...
+0073.925 () Entity: others
+0073.925 () restore_backup(backup_file=backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-others.zip, type=others, info=a:2:{s:4:"path";s:50:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0073.925 () Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-others.zip, 0 Mb)
+0073.974 () advanced-cache.php: Skipping cache file (does not already exist)
+0073.980 () Cleaning up rubbish...
+0073.993 () Restore successful!
+0073.993 () Restore successful

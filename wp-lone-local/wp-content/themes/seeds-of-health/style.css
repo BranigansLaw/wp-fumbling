@@ -1,0 +1,43 @@
+/*
+Theme Name: Seeds of Health Acupuncture Theme
+Theme URI: https://tyficonsulting.com/
+description: Theme for Seeds of Health Acupuncture
+Author: Tyler Findaly
+Author URI: https://tyficonsulting.com/
+Template: twentyseventeen
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: seeds-of-health-theme
+*/
+
+:root{
+	--seeds-green: #F26D26;
+	--seeds-orange: #161717;
+	--seeds-brown: #FFF;
+	--footer-desktop-height: 380px;
+}
+
+/********************** FOOTER ALWAYS ON BOTTOM **********************/
+@media (min-width: 992px) {
+	html, body {
+		height: 100%;
+	}
+
+	.site-content-contain {
+		min-height: 100%;
+		position: relative;
+	}
+
+	.site-content {
+		padding-bottom: var(--footer-desktop-height);
+	}
+
+	footer.site-footer {
+		width: 100%;
+		height: var(--footer-desktop-height);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+}

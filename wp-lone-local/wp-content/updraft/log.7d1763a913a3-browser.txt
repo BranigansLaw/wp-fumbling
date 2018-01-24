@@ -1,0 +1,91 @@
+0000.040 (R) [notice] Looking for db archive: file name: backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-db.gz
+0000.040 (R) [notice] Archive is expected to be size: 181.2 KB: OK
+0000.046 (R) [notice] Looking for plugins archive: file name: backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-plugins.zip
+0000.046 (R) [notice] Archive is expected to be size: 20145.5 KB: OK
+0000.049 (R) [notice] Looking for themes archive: file name: backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-themes.zip
+0000.049 (R) [notice] Archive is expected to be size: 945.3 KB: OK
+0000.052 (R) [notice] Looking for uploads archive: file name: backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-uploads.zip
+0000.053 (R) [notice] Archive is expected to be size: 0.6 KB: OK
+0000.056 (R) [notice] Looking for others archive: file name: backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-others.zip
+0000.057 (R) [notice] Archive is expected to be size: 11.9 KB: OK
+0000.065 (R) [notice] Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-db.gz, 0.2 Mb)
+0000.074 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0000.102 (R) [notice] Enabling Maintenance mode&#8230;
+0000.107 (R) [notice] Backup of: http://seedsofhealth.tyficonsulting.com
+0000.153 (R) [notice] Content URL: http://seedsofhealth.tyficonsulting.com/wp-content
+0000.154 (R) [notice] Uploads URL: http://seedsofhealth.tyficonsulting.com/wp-content/uploads
+0000.154 (R) [notice] Old table prefix: wp_
+0000.154 (R) [notice] Site information: multisite = 0
+0000.156 (R) [notice] New table prefix: wp_
+0000.175 (R) [notice] Processing table (MyISAM):  wp_options
+0000.493 (R) [notice] Search and replacing table: wp_options: rows: 438
+0000.724 (R) [notice] Processing table (MyISAM):  wp_users
+0000.764 (R) [notice] Search and replacing table: wp_users: rows: 1
+0000.765 (R) [notice] Processing table (MyISAM):  wp_usermeta
+0000.807 (R) [notice] Search and replacing table: wp_usermeta: rows: 37
+0000.817 (R) [notice] Processing table (MyISAM):  wp_commentmeta
+0000.843 (R) [notice] Search and replacing table: wp_commentmeta: rows: 0
+0000.843 (R) [notice] Processing table (MyISAM):  wp_comments
+0000.879 (R) [notice] Search and replacing table: wp_comments: rows: 1
+0000.880 (R) [notice] Processing table (MyISAM):  wp_links
+0000.916 (R) [notice] Search and replacing table: wp_links: rows: 0
+0000.917 (R) [notice] Processing table (MyISAM):  wp_postmeta
+0000.988 (R) [notice] Search and replacing table: wp_postmeta: rows: 3
+0000.990 (R) [notice] Processing table (MyISAM):  wp_posts
+0001.031 (R) [notice] Search and replacing table: wp_posts: rows: 61
+0001.078 (R) [notice] Processing table (MyISAM):  wp_term_relationships
+0001.112 (R) [notice] Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0001.112 (R) [notice] Processing table (MyISAM):  wp_term_taxonomy
+0001.148 (R) [notice] Search and replacing table: wp_term_taxonomy: rows: 3
+0001.150 (R) [notice] Processing table (MyISAM):  wp_termmeta
+0001.174 (R) [notice] Search and replacing table: wp_termmeta: rows: 0
+0001.174 (R) [notice] Processing table (MyISAM):  wp_terms
+0001.209 (R) [notice] Search and replacing table: wp_terms: rows: 3
+0001.211 (R) [notice] Processing table (MyISAM):  wp_yoast_seo_links
+0001.241 (R) [notice] Search and replacing table: wp_yoast_seo_links: rows: 1
+0001.242 (R) [notice] Processing table (MyISAM):  wp_yoast_seo_meta
+0001.264 (R) [notice] Disabling Maintenance mode&#8230;
+0001.278 (R) [notice] Search and replacing table: wp_yoast_seo_meta: rows: 19
+0001.281 (R) [notice] Finished: lines processed: 48 in 1.20 seconds
+0001.282 (R) [notice] Cleaning up rubbish...
+0001.289 (R) [notice] Warning: the database's site URL (http://localhost/wp-fumbling/wp-lone-local/) is different to what we expected (http://seedsofhealth.tyficonsulting.com)
+0001.290 (R) [notice] Warning: the database's home URL (http://localhost/wp-fumbling/wp-lone-local/) is different to what we expected (http://seedsofhealth.tyficonsulting.com)
+0001.291 (R) [notice] Database search and replace: replace http://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0001.291 (R) [notice] Database search and replace: replace https://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0001.292 (R) [notice] Search and replacing table: wp_commentmeta: already done
+0001.292 (R) [notice] Search and replacing table: wp_comments: already done
+0001.293 (R) [notice] Search and replacing table: wp_links: already done
+0001.293 (R) [notice] Search and replacing table: wp_options: already done
+0001.293 (R) [notice] Search and replacing table: wp_postmeta: already done
+0001.293 (R) [notice] Search and replacing table: wp_posts: already done
+0001.293 (R) [notice] Search and replacing table: wp_term_relationships: already done
+0001.293 (R) [notice] Search and replacing table: wp_term_taxonomy: already done
+0001.293 (R) [notice] Search and replacing table: wp_termmeta: already done
+0001.294 (R) [notice] Search and replacing table: wp_terms: already done
+0001.294 (R) [notice] Search and replacing table: wp_usermeta: already done
+0001.294 (R) [notice] Search and replacing table: wp_users: already done
+0001.294 (R) [notice] Search and replacing table: wp_yoast_seo_links: already done
+0001.294 (R) [notice] Search and replacing table: wp_yoast_seo_meta: already done
+0001.294 (R) [notice] Tables examined: 13
+0001.294 (R) [notice] Rows examined: 567
+0001.294 (R) [notice] Changes made: 14
+0001.294 (R) [notice] SQL update commands run: 14
+0001.295 (R) [notice] Errors: 0
+0001.295 (R) [notice] Time taken (seconds): 0.389
+0001.309 (R) [notice] Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-plugins.zip, 19.7 Mb)
+0070.672 (R) [notice] Moving old data out of the way...
+0071.369 (R) [notice] Moving unpacked backup into place...
+0072.965 (R) [notice] Cleaning up rubbish...
+0072.967 (R) [notice] Disabled this plugin: W3 Total Cache: re-activate it manually when you are ready.
+0072.971 (R) [notice] Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-themes.zip, 0.9 Mb)
+0073.838 (R) [notice] Moving old data out of the way...
+0073.880 (R) [notice] Moving unpacked backup into place...
+0073.901 (R) [notice] Cleaning up rubbish...
+0073.905 (R) [notice] Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-uploads.zip, 0 Mb)
+0073.915 (R) [notice] Moving old data out of the way...
+0073.917 (R) [notice] Moving unpacked backup into place...
+0073.921 (R) [notice] Cleaning up rubbish...
+0073.925 (R) [notice] Unpacking backup... (backup_2018-01-24-0019_Seeds_of_Health_6b1c73cd4376-others.zip, 0 Mb)
+0073.974 (R) [notice] advanced-cache.php: Skipping cache file (does not already exist)
+0073.980 (R) [notice] Cleaning up rubbish...
+0073.993 (R) [notice] Restore successful!
