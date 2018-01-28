@@ -22,111 +22,130 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
 				<section class="homepage-services">
-					<?php 
-						$services = get_field( 'services' );
+					<div class="inner services-list row">
+						<?php 
+							$services = get_field( 'services' );
 
-						if ( $services ) {
+							if ( $services ) {
 
-							foreach( $services as $post ) : setup_postdata( $post ); 
+								foreach( $services as $post ) : setup_postdata( $post ); 
+						?>
 
-								get_template_part( 'template-parts/service/service-single', 'display' );
-							
-							endforeach;
+						<div class="col-md-4">
 
-							wp_reset_postdata();
-						}
-					?>
+									<?php get_template_part( 'template-parts/service/service-single', 'display' ); ?>
+
+						</div>
+
+						<?php
+								
+								endforeach;
+
+								wp_reset_postdata();
+							}
+						?>
+					</div>
 				</section>
 				<section class="call-to-action upper">
-					<h2><?php the_field( 'call_to_action_title' ) ?></h2>
-					<h4><?php the_field( 'call_to_action_subtitle' ) ?></h4>
-					<a href="<?php the_field( 'call_to_action_target' ) ?>" class="btn btn-lg btn-primary">
-						<?php the_field( 'call_to_action_button_text' ) ?>
-					</a>
+					<div class="inner">
+						<h2><?php the_field( 'call_to_action_title' ) ?></h2>
+						<h4><?php the_field( 'call_to_action_subtitle' ) ?></h4>
+						<a href="<?php the_field( 'call_to_action_target' ) ?>" class="btn btn-lg btn-primary">
+							<?php the_field( 'call_to_action_button_text' ) ?>
+						</a>
+					</div>
 				</section>
 				<section class="benefits">
-					<h2><?php the_field( 'benefits_title' ) ?></h2>
-					<h4><?php the_field( 'benefits_subtitle' ) ?></h4>
-					<?php 
-						if ( have_rows( 'benefits' ) ) : 
-							while ( have_rows('benefits') ) : the_row();
-					?>
-							<div class="benefit row">
-								<div class="col-md-3">
-									<?php 
-										$image = get_sub_field( 'benefit_image' );
-										$size = 'medium';
+					<div class="inner">
+						<h2><?php the_field( 'benefits_title' ) ?></h2>
+						<h4><?php the_field( 'benefits_subtitle' ) ?></h4>
+						<?php 
+							if ( have_rows( 'benefits' ) ) : 
+								while ( have_rows('benefits') ) : the_row();
+						?>
+								<div class="benefit row">
+									<div class="col-md-3">
+										<?php 
+											$image = get_sub_field( 'benefit_image' );
+											$size = 'medium';
 
-										if( $image ) {
+											if( $image ) {
 
-											echo wp_get_attachment_image( $image, $size );
+												echo wp_get_attachment_image( $image, $size );
 
-										}
-									?>
+											}
+										?>
+									</div>
+									<div class="col-md-9">
+										<h3><?php the_sub_field( 'benefit_title') ?></h3>
+										<p>
+											<?php the_sub_field( 'benefit_description' ) ?>
+										</p>
+										<a class="btn btn-sm" href="<?php the_sub_field( 'benefit_link' ) ?>">Read More</a>
+									</div>
 								</div>
-								<div class="col-md-9">
-									<h3><?php the_sub_field( 'benefit_title') ?></h3>
-									<p>
-										<?php the_sub_field( 'benefit_description' ) ?>
-									</p>
-									<a class="btn btn-sm" href="<?php the_sub_field( 'benefit_link' ) ?>">Read More</a>
-								</div>
-							</div>
-					<?php
-							endwhile;
-						endif;
-					?>
+						<?php
+								endwhile;
+							endif;
+						?>
+					</div>
 				</section>
 				<section class="testimonials">
-					<h2><?php the_field( 'testimonials_title' ) ?></h2>
-					<?php 
-						$testimonials = get_field( 'testimonials' );
+					<div class="inner">
+						<h2><?php the_field( 'testimonials_title' ) ?></h2>
+						<?php 
+							$testimonials = get_field( 'testimonials' );
 
-						if ( $testimonials ) {
+							if ( $testimonials ) {
 
-							foreach( $testimonials as $post ) : setup_postdata( $post ); 
+								foreach( $testimonials as $post ) : setup_postdata( $post ); 
 
-								get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
-							
-							endforeach;
+									get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
+								
+								endforeach;
 
-							wp_reset_postdata();
-						}
-					?>
+								wp_reset_postdata();
+							}
+						?>
+					</div>
 				</section>	
 				<section class="call-to-action lower">
-					<?php
-						$bottom_call_to_action_title =
-							get_field( 'bottom_call_to_action_title' ) ?
-								get_field( 'bottom_call_to_action_title' ) : 
-								get_field( 'call_to_action_title' );
-						$bottom_call_to_action_button_text =
-							get_field( 'bottom_call_to_action_button_text' ) ?
-								get_field( 'bottom_call_to_action_button_text' ) : 
-								get_field( 'call_to_action_button_text' );
-						$bottom_call_to_action_targer =
-							get_field( 'bottom_call_to_action_targer' ) ?
-								get_field( 'bottom_call_to_action_targer' ) : 
-								get_field( 'call_to_action_target' );
-						$bottom_call_to_action_text =
-							get_field( 'bottom_call_to_action_text' ) ?
-								get_field( 'bottom_call_to_action_text' ) : 
-								get_field( 'call_to_action_button_text' );
-					?>
-					<h2><?php echo $bottom_call_to_action_title ?></h2>
-					<h4><?php echo $bottom_call_to_action_button_text ?></h4>
-					<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">
-						<?php echo $bottom_call_to_action_text ?>
-					</a>
+					<div class="inner">
+						<?php
+							$bottom_call_to_action_title =
+								get_field( 'bottom_call_to_action_title' ) ?
+									get_field( 'bottom_call_to_action_title' ) : 
+									get_field( 'call_to_action_title' );
+							$bottom_call_to_action_button_text =
+								get_field( 'bottom_call_to_action_button_text' ) ?
+									get_field( 'bottom_call_to_action_button_text' ) : 
+									get_field( 'call_to_action_button_text' );
+							$bottom_call_to_action_targer =
+								get_field( 'bottom_call_to_action_targer' ) ?
+									get_field( 'bottom_call_to_action_targer' ) : 
+									get_field( 'call_to_action_target' );
+							$bottom_call_to_action_text =
+								get_field( 'bottom_call_to_action_text' ) ?
+									get_field( 'bottom_call_to_action_text' ) : 
+									get_field( 'call_to_action_button_text' );
+						?>
+						<h2><?php echo $bottom_call_to_action_title ?></h2>
+						<h4><?php echo $bottom_call_to_action_button_text ?></h4>
+						<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">
+							<?php echo $bottom_call_to_action_text ?>
+						</a>
+					</div>
 				</section>
 				<section class="comments">
-					<?php
+					<div class="inner">
+						<?php
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						//if ( comments_open() || get_comments_number() ) :
-						//	comments_template();
-						//endif;
-					?>
+							// If comments are open or we have at least one comment, load up the comment template.
+							//if ( comments_open() || get_comments_number() ) :
+							//	comments_template();
+							//endif;
+						?>
+					</div>
 				</section>
 			</article>
 		<?php endwhile; ?>

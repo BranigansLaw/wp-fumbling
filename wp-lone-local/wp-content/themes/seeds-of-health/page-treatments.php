@@ -19,39 +19,14 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
 				<section class="services">
-					<?php
-						$service_args = array(
-							'post_type'			=> 'services',
-							'post_status'		=> 'publish',
-							'posts_per_page'	=> -1,
-							'meta_key'			=> 'preganacy_service',
-							'meta_value'		=> get_field( 'pregnancy_only_treatments' ) ? 1 : 0
-						);
-
-						$services = new WP_Query( $service_args );
-		
-						// Start the loop.
-						while ( $services->have_posts() ) : $services->the_post();
-
-							get_template_part( 'template-parts/service/service-single', 'display' );
-
-						endwhile;
-
-						wp_reset_postdata();
-					?>
-				</section>
-				<?php
-					if ( !get_field( 'pregnancy_only_treatments' ) ) :
-				?>
-					<section class="pregnancy_treatments">
-						<h2>Pregnancy</h2>
+					<div class="inner">
 						<?php
 							$service_args = array(
 								'post_type'			=> 'services',
 								'post_status'		=> 'publish',
 								'posts_per_page'	=> -1,
 								'meta_key'			=> 'preganacy_service',
-								'meta_value'		=> 1
+								'meta_value'		=> get_field( 'pregnancy_only_treatments' ) ? 1 : 0
 							);
 
 							$services = new WP_Query( $service_args );
@@ -65,41 +40,72 @@ get_header(); ?>
 
 							wp_reset_postdata();
 						?>
-					</section>
-					<section class="testimonials">
-						<h2>Testimonials</h2>
-						<?php 
-							$testimonials = get_field( 'testimonials' );
+					</div>
+				</section>
+				<?php
+					if ( !get_field( 'pregnancy_only_treatments' ) ) :
+				?>
+					<section class="pregnancy_treatments">
+						<div class="inner">
+							<h2>Pregnancy</h2>
+							<?php
+								$service_args = array(
+									'post_type'			=> 'services',
+									'post_status'		=> 'publish',
+									'posts_per_page'	=> -1,
+									'meta_key'			=> 'preganacy_service',
+									'meta_value'		=> 1
+								);
 
-							$contact_form_class = $testimonials ? 'col-md-4' : 'col-md-12';
+								$services = new WP_Query( $service_args );
+				
+								// Start the loop.
+								while ( $services->have_posts() ) : $services->the_post();
 
-							if ( $testimonials ) :
-						?>
-							<div class="col-md-8">
-						<?php
+									get_template_part( 'template-parts/service/service-single', 'display' );
 
-								foreach( $testimonials as $post ) : setup_postdata( $post ); 
-
-									get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
-								
-								endforeach;
+								endwhile;
 
 								wp_reset_postdata();
-						?>
-							</div>
-						<?php
-							endif;
-						?>
-						<div class="<?php echo $contact_form_class ?>">
-							<?php
-								$contact_form = get_field( 'contact_form' );
-
-								if ( $contact_form ) {
-
-									echo do_shortcode( '[contact-form-7 id="' . $contact_form->ID . '" title="' . $contact_form->post_title . '"]' );
-
-								}
 							?>
+						</div>
+					</section>
+					<section class="testimonials">
+						<div class="inner">
+							<h2>Testimonials</h2>
+							<?php 
+								$testimonials = get_field( 'testimonials' );
+
+								$contact_form_class = $testimonials ? 'col-md-4' : 'col-md-12';
+
+								if ( $testimonials ) :
+							?>
+								<div class="col-md-8">
+							<?php
+
+									foreach( $testimonials as $post ) : setup_postdata( $post ); 
+
+										get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
+									
+									endforeach;
+
+									wp_reset_postdata();
+							?>
+								</div>
+							<?php
+								endif;
+							?>
+							<div class="<?php echo $contact_form_class ?>">
+								<?php
+									$contact_form = get_field( 'contact_form' );
+
+									if ( $contact_form ) {
+
+										echo do_shortcode( '[contact-form-7 id="' . $contact_form->ID . '" title="' . $contact_form->post_title . '"]' );
+
+									}
+								?>
+							</div>
 						</div>
 					</section>
 				<?php
