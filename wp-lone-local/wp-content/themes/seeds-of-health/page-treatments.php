@@ -9,27 +9,114 @@
 
 get_header(); ?>
 
-<div class="">
-	<main id="main" class="site-main main-content-fade" role="main">
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+<div class="wrap">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-			// Include the page content template.
-			get_template_part( 'template-parts/content', 'home' );
+			<?php
+			while ( have_posts() ) : the_post();
+			?>
+				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) {
-				comments_template();
-			}
+				<section class="services">
+					<?php
+						$service_args = array(
+							'post_type'			=> 'services',
+							'post_status'		=> 'publish',
+							'posts_per_page'	=> -1,
+							'meta_key'			=> 'preganacy_service',
+							'meta_value'		=> get_field( 'pregnancy_only_treatments' ) ? 1 : 0
+						);
 
-			// End of the loop.
-		endwhile;
-		?>
+						$services = new WP_Query( $service_args );
 		
-		Treatments
-	</main><!-- .site-main -->
+						// Start the loop.
+						while ( $services->have_posts() ) : $services->the_post();
 
-</div><!-- .content-area -->
+							get_template_part( 'template-parts/service/service-single', 'display' );
+
+						endwhile;
+
+						wp_reset_postdata();
+					?>
+				</section>
+				<?php
+					if ( !get_field( 'pregnancy_only_treatments' ) ) :
+				?>
+					<section class="pregnancy_treatments">
+						<h2>Pregnancy</h2>
+						<?php
+							$service_args = array(
+								'post_type'			=> 'services',
+								'post_status'		=> 'publish',
+								'posts_per_page'	=> -1,
+								'meta_key'			=> 'preganacy_service',
+								'meta_value'		=> 1
+							);
+
+							$services = new WP_Query( $service_args );
+			
+							// Start the loop.
+							while ( $services->have_posts() ) : $services->the_post();
+
+								get_template_part( 'template-parts/service/service-single', 'display' );
+
+							endwhile;
+
+							wp_reset_postdata();
+						?>
+					</section>
+					<section class="testimonials">
+						<h2>Testimonials</h2>
+						<?php 
+							$testimonials = get_field( 'testimonials' );
+
+							$contact_form_class = $testimonials ? 'col-md-4' : 'col-md-12';
+
+							if ( $testimonials ) :
+						?>
+							<div class="col-md-8">
+						<?php
+
+								foreach( $testimonials as $post ) : setup_postdata( $post ); 
+
+									get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
+								
+								endforeach;
+
+								wp_reset_postdata();
+						?>
+							</div>
+						<?php
+							endif;
+						?>
+						<div class="<?php echo $contact_form_class ?>">
+							<?php
+								$contact_form = get_field( 'contact_form' );
+
+								if ( $contact_form ) {
+
+									echo do_shortcode( '[contact-form-7 id="' . $contact_form->ID . '" title="' . $contact_form->post_title . '"]' );
+
+								}
+							?>
+						</div>
+					</section>
+				<?php
+					endif;
+				?>
+				<?php
+				// If comments are open or we have at least one comment, load up the comment template.
+				//if ( comments_open() || get_comments_number() ) :
+				//	comments_template();
+				//endif;
+				?>
+			<?php
+			endwhile; // End of the loop.
+			?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+</div><!-- .wrap -->
 
 <?php get_footer(); ?>

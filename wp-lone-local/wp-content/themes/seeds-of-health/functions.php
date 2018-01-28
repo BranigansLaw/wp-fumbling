@@ -7,7 +7,7 @@ function theme_enqueue_styles() {
 
     	$parent_style = 'parent-style';
 
-    	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array('bootstrap'), '1.0.0' );
+    	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array('bootstrap'), '1.0.1' );
 
     	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300%7CSource+Sans+Pro%7COpen+Sans%7CFjord+One%7COpen+Sans:700%7COpen+Sans:600%7CFjord+One:300%7CFjord+One:600' );
 
@@ -34,7 +34,7 @@ function enqueue_my_scripts() {
 	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array('jquery'), null, true); // all the bootstrap javascript goodness
 
 	// Register theme JavaScript
-	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jquery'), '1.0.1', true);
+	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jquery'), '1.0.2', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 
