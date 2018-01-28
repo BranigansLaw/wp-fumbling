@@ -11,6 +11,6 @@
 <header class="seeds-subtitle-header">
 	<h1><?php the_title() ?></h1>
 	<img src="featured-image" />
-	<h2>Subtitle (if exists)</h2>
+	<h2><?php the_field( 'subtitle' ) ?></h2>
 	<div><?php the_content() ?></div>
 </header>

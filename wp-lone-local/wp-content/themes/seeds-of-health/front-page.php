@@ -62,7 +62,7 @@ get_header(); ?>
 											echo wp_get_attachment_image( $image, $size );
 
 										}
-								?>
+									?>
 								</div>
 								<div class="col-md-9">
 									<h3><?php the_sub_field( 'benefit_title') ?></h3>
