@@ -20,8 +20,17 @@ Text Domain: seeds-of-health-theme
 	--footer-desktop-height: 250px;
 }
 
+html {
+	background-color: var(--seeds-brown);
+}
+
 body {
 	font-family: 'Open Sans', 'Arial';
+}
+
+.has-sidebar:not(.error404) #primary {
+	float: none;
+	width: inherit;
 }
 
 /* Desktop */
