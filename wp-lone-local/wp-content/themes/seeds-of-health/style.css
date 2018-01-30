@@ -5,7 +5,7 @@ description: Theme for Seeds of Health Acupuncture
 Author: Tyler Findaly
 Author URI: https://tyficonsulting.com/
 Template: twentyseventeen
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: seeds-of-health-theme
@@ -47,6 +47,15 @@ h3 {
 	font-weight: 400;
 	color: var(--seeds-green);
 	font-size: 2em;
+}
+
+label {
+    font-weight: inherit;
+    color: inherit;
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea {
+	border-color: var(--seeds-red);
 }
 
 .has-sidebar:not(.error404) #primary {
