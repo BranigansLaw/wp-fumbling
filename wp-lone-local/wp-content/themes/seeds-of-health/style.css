@@ -67,6 +67,10 @@ header.seeds-subtitle-header .inner {
 	text-align: center;
 }
 
+.single-featured-image-header {
+	display: none;
+}
+
 /* Desktop */
 @media screen and (min-width: 48em) {
 
@@ -110,6 +114,10 @@ header.seeds-subtitle-header .inner {
 
 	.main-navigation {
 		display: inline-block;
+	}
+
+	.site-content {
+	    padding: 0;
 	}
 }
 
@@ -172,6 +180,28 @@ header.seeds-subtitle-header .inner {
 
 	.navigation-top .sub-menu a {
 		color: white;
+	}
+}
+
+/******** HEADER ********/
+@media screen and ( min-width: 67em ) {
+	.seeds-subtitle-header {
+		background-color: var(--seeds-orange);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		height: 24rem;
+		color: white;
+	}
+
+	.seeds-subtitle-header .inner {
+		display: table;
+	    height: 100%;
+	}
+
+	.seeds-subtitle-header .inner h1 {
+		display: table-cell;
+	    vertical-align: middle;
 	}
 }
 
