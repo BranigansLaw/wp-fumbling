@@ -15,7 +15,7 @@ Text Domain: seeds-of-health-theme
 	--seeds-green: #737144;
 	--seeds-orange: #EBD7BB;
 	--seeds-brown: #B99E7B;
-	--seeds-red: #580058;
+	--seeds-red: #6A1F29;
 	--seeds-black: #333;
 	--footer-desktop-height: 250px;
 }
@@ -26,11 +26,36 @@ html {
 
 body {
 	font-family: 'Open Sans', 'Arial';
+	font-size: 1.2rem;
+	line-height: 2.25rem;
+}
+
+h1, h2 {
+	font-family: 'Source Sans Pro', 'Arial';
+	font-weight: 300;
+	font-size: 4rem;
+	text-align: center;
+}
+
+h2 .highlight {
+	font-weight: 500;
+	color: var(--seeds-orange);
+}
+
+h3 {
+	font-family: 'Fjord One';
+	font-weight: 400;
+	color: var(--seeds-green);
+	font-size: 2em;
 }
 
 .has-sidebar:not(.error404) #primary {
 	float: none;
 	width: inherit;
+}
+
+header.seeds-subtitle-header .inner {
+	text-align: center;
 }
 
 /* Desktop */
@@ -77,6 +102,19 @@ body {
 	.main-navigation {
 		display: inline-block;
 	}
+}
+
+/******** BUTTONS ********/
+.btn {
+	background-color: var(--seeds-red) !important;
+	color: #E1E1E1 !important;
+	border: 0 !important;
+	transition: 0.5s all ease-in-out !important;
+}
+
+.btn:hover {
+    background-color: #E1E1E1 !important;
+    color: var(--seeds-red) !important;
 }
 
 /******** TOP NAVIGATION ********/
@@ -131,6 +169,10 @@ body {
 /******** HOMEPAGE ********/
 .homepage-services {
 	background-color: var(--seeds-orange);
+}
+
+.call-to-action {
+	text-align: center;
 }
 
 /******** SOCIAL NAVIGATION ********/

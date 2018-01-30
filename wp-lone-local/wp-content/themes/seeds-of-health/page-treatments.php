@@ -20,26 +20,32 @@ get_header(); ?>
 
 				<section class="services">
 					<div class="inner">
-						<?php
-							$service_args = array(
-								'post_type'			=> 'services',
-								'post_status'		=> 'publish',
-								'posts_per_page'	=> -1,
-								'meta_key'			=> 'preganacy_service',
-								'meta_value'		=> get_field( 'pregnancy_only_treatments' ) ? 1 : 0
-							);
+						<div class="row">
+							<?php
+								$service_args = array(
+									'post_type'			=> 'services',
+									'post_status'		=> 'publish',
+									'posts_per_page'	=> -1,
+									'meta_key'			=> 'preganacy_service',
+									'meta_value'		=> get_field( 'pregnancy_only_treatments' ) ? 1 : 0
+								);
 
-							$services = new WP_Query( $service_args );
-			
-							// Start the loop.
-							while ( $services->have_posts() ) : $services->the_post();
+								$services = new WP_Query( $service_args );
+				
+								// Start the loop.
+								while ( $services->have_posts() ) : $services->the_post();
+							?>
+								<div class="col-md-4">
+							<?php
+									get_template_part( 'template-parts/service/service-single', 'display' );
+							?>
+								</div>
+							<?php
+								endwhile;
 
-								get_template_part( 'template-parts/service/service-single', 'display' );
-
-							endwhile;
-
-							wp_reset_postdata();
-						?>
+								wp_reset_postdata();
+							?>
+						</div>
 					</div>
 				</section>
 				<?php
@@ -48,26 +54,33 @@ get_header(); ?>
 					<section class="pregnancy_treatments">
 						<div class="inner">
 							<h2>Pregnancy</h2>
-							<?php
-								$service_args = array(
-									'post_type'			=> 'services',
-									'post_status'		=> 'publish',
-									'posts_per_page'	=> -1,
-									'meta_key'			=> 'preganacy_service',
-									'meta_value'		=> 1
-								);
+							<div class="row">
+								<?php
+									$service_args = array(
+										'post_type'			=> 'services',
+										'post_status'		=> 'publish',
+										'posts_per_page'	=> -1,
+										'meta_key'			=> 'preganacy_service',
+										'meta_value'		=> 1
+									);
 
-								$services = new WP_Query( $service_args );
-				
-								// Start the loop.
-								while ( $services->have_posts() ) : $services->the_post();
+									$services = new WP_Query( $service_args );
+					
+									// Start the loop.
+									while ( $services->have_posts() ) : $services->the_post();
+								?>
 
-									get_template_part( 'template-parts/service/service-single', 'display' );
+								<div class="col-md-4">
+								<?php
+										get_template_part( 'template-parts/service/service-single', 'display' );
+								?>
+								</div>
+								<?php
+									endwhile;
 
-								endwhile;
-
-								wp_reset_postdata();
-							?>
+									wp_reset_postdata();
+								?>
+							</div>
 						</div>
 					</section>
 					<section class="testimonials">
