@@ -59,11 +59,6 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 	border-color: var(--seeds-red);
 }
 
-.has-sidebar:not(.error404) #primary {
-	float: none;
-	width: inherit;
-}
-
 header.seeds-subtitle-header .inner {
 	text-align: center;
 }
@@ -136,6 +131,20 @@ header.seeds-subtitle-header .inner {
 	main header .inner, main section .inner {
 		margin: 0 1em;
 	}
+}
+
+/******** TWENTYSEVENTEEN OVERRIDES ********/
+.has-sidebar:not(.error404) #primary {
+	float: none;
+	width: inherit;
+}
+
+.twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child) {
+	border-top: 0;
+}
+
+.page:not(.home) #content {
+	padding-bottom: 0;
 }
 
 /******** BUTTONS ********/
@@ -394,4 +403,13 @@ footer.site-footer {
 	.pregnancy_treatments {
 		height: 360px;
 	}
+}
+
+/******** TESTIMONIALS ********/
+.testimonials {
+	background: var(--seeds-orange);
+}
+
+.testimonial .patient-name {
+	font-weight: 800;
 }

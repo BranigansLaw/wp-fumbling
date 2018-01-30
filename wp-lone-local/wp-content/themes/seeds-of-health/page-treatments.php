@@ -89,39 +89,41 @@ get_header(); ?>
 					</section>
 					<section class="testimonials">
 						<div class="inner">
-							<h2>Testimonials</h2>
-							<?php 
-								$testimonials = get_field( 'testimonials' );
+							<div class="row">
+								<h2>Testimonials</h2>
+								<?php 
+									$testimonials = get_field( 'testimonials' );
 
-								$contact_form_class = $testimonials ? 'col-md-4' : 'col-md-12';
+									$contact_form_class = $testimonials ? 'col-md-4' : 'col-md-12';
 
-								if ( $testimonials ) :
-							?>
-								<div class="col-md-8">
-							<?php
-
-									foreach( $testimonials as $post ) : setup_postdata( $post ); 
-
-										get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
-									
-									endforeach;
-
-									wp_reset_postdata();
-							?>
-								</div>
-							<?php
-								endif;
-							?>
-							<div class="<?php echo $contact_form_class ?>">
-								<?php
-									$contact_form = get_field( 'contact_form' );
-
-									if ( $contact_form ) {
-
-										echo do_shortcode( '[contact-form-7 id="' . $contact_form->ID . '" title="' . $contact_form->post_title . '"]' );
-
-									}
+									if ( $testimonials ) :
 								?>
+									<div class="col-md-8">
+								<?php
+
+										foreach( $testimonials as $post ) : setup_postdata( $post ); 
+
+											get_template_part( 'template-parts/testimonial/testimonial-single', 'display' );
+										
+										endforeach;
+
+										wp_reset_postdata();
+								?>
+									</div>
+								<?php
+									endif;
+								?>
+								<div class="<?php echo $contact_form_class ?>">
+									<?php
+										$contact_form = get_field( 'contact_form' );
+
+										if ( $contact_form ) {
+
+											echo do_shortcode( '[contact-form-7 id="' . $contact_form->ID . '" title="' . $contact_form->post_title . '"]' );
+
+										}
+									?>
+								</div>
 							</div>
 						</div>
 					</section>
