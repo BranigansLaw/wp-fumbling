@@ -9,7 +9,7 @@
  */
 ?>
 <article class="service">
-	<h3>Service: <?php the_title() ?>: $<?php the_field( 'price' ) ?></h3>
+	<h3><?php the_title() ?></h3>
 	<div>
 		<?php the_content() ?>
 	</div>

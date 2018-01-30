@@ -46,13 +46,18 @@ get_header(); ?>
 						?>
 					</div>
 				</section>
-				<section class="call-to-action upper">
+				<?php
+					$call_to_action_image_url = get_field('call_to_action_background')['url'];
+				?>
+				<section class="call-to-action upper" style="background-image: url('<?php echo $call_to_action_image_url ?>')">
 					<div class="inner">
-						<h2><?php the_field( 'call_to_action_title' ) ?></h2>
-						<h4><?php the_field( 'call_to_action_subtitle' ) ?></h4>
-						<a href="<?php the_field( 'call_to_action_target' ) ?>" class="btn btn-lg btn-primary">
-							<?php the_field( 'call_to_action_button_text' ) ?>
-						</a>
+						<div class="call-to-action-content">
+							<h2><?php the_field( 'call_to_action_title' ) ?></h2>
+							<h4><?php the_field( 'call_to_action_subtitle' ) ?></h4>
+							<a href="<?php the_field( 'call_to_action_target' ) ?>" class="btn btn-lg btn-primary">
+								<?php the_field( 'call_to_action_button_text' ) ?>
+							</a>
+						</div>
 					</div>
 				</section>
 				<section class="benefits">
@@ -109,31 +114,38 @@ get_header(); ?>
 						?>
 					</div>
 				</section>	
-				<section class="call-to-action lower">
+				<?php
+					$bottom_call_to_action_title =
+						get_field( 'bottom_call_to_action_title' ) ?
+							get_field( 'bottom_call_to_action_title' ) : 
+							get_field( 'call_to_action_title' );
+					$bottom_call_to_action_button_text =
+						get_field( 'bottom_call_to_action_button_text' ) ?
+							get_field( 'bottom_call_to_action_button_text' ) : 
+							get_field( 'call_to_action_button_text' );
+					$bottom_call_to_action_targer =
+						get_field( 'bottom_call_to_action_targer' ) ?
+							get_field( 'bottom_call_to_action_targer' ) : 
+							get_field( 'call_to_action_target' );
+					$bottom_call_to_action_text =
+						get_field( 'bottom_call_to_action_text' ) ?
+							get_field( 'bottom_call_to_action_text' ) : 
+							get_field( 'call_to_action_subtitle' );
+					$bottom_call_to_action_image_url = 
+						get_field('bottom_call_to_action_background') ?
+							get_field( 'bottom_call_to_action_background' )['url'] : 
+							get_field( 'call_to_action_button_text' )['url'];
+
+				?>
+				<section class="call-to-action lower" style="background-image: url('<?php echo $bottom_call_to_action_image_url ?>')">
 					<div class="inner">
-						<?php
-							$bottom_call_to_action_title =
-								get_field( 'bottom_call_to_action_title' ) ?
-									get_field( 'bottom_call_to_action_title' ) : 
-									get_field( 'call_to_action_title' );
-							$bottom_call_to_action_button_text =
-								get_field( 'bottom_call_to_action_button_text' ) ?
-									get_field( 'bottom_call_to_action_button_text' ) : 
-									get_field( 'call_to_action_button_text' );
-							$bottom_call_to_action_targer =
-								get_field( 'bottom_call_to_action_targer' ) ?
-									get_field( 'bottom_call_to_action_targer' ) : 
-									get_field( 'call_to_action_target' );
-							$bottom_call_to_action_text =
-								get_field( 'bottom_call_to_action_text' ) ?
-									get_field( 'bottom_call_to_action_text' ) : 
-									get_field( 'call_to_action_button_text' );
-						?>
-						<h2><?php echo $bottom_call_to_action_title ?></h2>
-						<h4><?php echo $bottom_call_to_action_button_text ?></h4>
-						<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">
-							<?php echo $bottom_call_to_action_text ?>
-						</a>
+						<div class="call-to-action-content">
+							<h2><?php echo $bottom_call_to_action_title ?></h2>
+							<h4><?php echo $bottom_call_to_action_text ?></h4>
+							<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">
+								<?php echo $bottom_call_to_action_button_text ?>
+							</a>
+						</div>
 					</div>
 				</section>
 				<section class="comments">

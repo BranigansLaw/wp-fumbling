@@ -17,6 +17,7 @@ Text Domain: seeds-of-health-theme
 	--seeds-brown: #B99E7B;
 	--seeds-red: #6A1F29;
 	--seeds-black: #333;
+	--seeds-white: #EDEDED;
 	--footer-desktop-height: 250px;
 }
 
@@ -71,6 +72,21 @@ header.seeds-subtitle-header .inner {
 	display: none;
 }
 
+.wrap {
+	margin: 0;
+	max-width: inherit;
+	padding: 0;
+}
+
+.comments {
+	display: none;
+}
+
+.site-footer {
+	margin-top: 0;
+	border-top: 0;
+}
+
 /* Desktop */
 @media screen and (min-width: 48em) {
 
@@ -78,12 +94,6 @@ header.seeds-subtitle-header .inner {
 		max-width: 1000px;
 		margin: 0 auto;
 		padding: 2em;
-	}
-
-	.wrap {
-		margin: 0;
-		max-width: inherit;
-    	padding: 0;
 	}
 
 	.social-navigation {
@@ -121,6 +131,13 @@ header.seeds-subtitle-header .inner {
 	}
 }
 
+/* Mobile */
+@media screen and ( max-width: 48em ) {
+	main header .inner, main section .inner {
+		margin: 0 1em;
+	}
+}
+
 /******** BUTTONS ********/
 .btn {
 	background-color: var(--seeds-red) !important;
@@ -144,7 +161,7 @@ header.seeds-subtitle-header .inner {
 }
 
 .navigation-top a {
-	color: white;
+	color: var(--seeds-white);
 	font-weight: 400;
 }
 
@@ -179,7 +196,7 @@ header.seeds-subtitle-header .inner {
 	}
 
 	.navigation-top .sub-menu a {
-		color: white;
+		color: var(--seeds-white);
 	}
 }
 
@@ -216,7 +233,7 @@ header.seeds-subtitle-header .inner {
 		background-position: center;
 		background-size: cover;
 		height: 24rem;
-		color: white;
+		color: var(--seeds-white);
 	}
 
 	.seeds-subtitle-header .inner {
@@ -243,6 +260,51 @@ header.seeds-subtitle-header .inner {
 
 .call-to-action {
 	text-align: center;
+	background: var(--seeds-green);
+}
+
+.call-to-action h2 {
+	margin-bottom: 0;
+	color: var(--seeds-white);
+}
+
+.call-to-action h4 {
+	font-family: 'Fjord One','Arial';
+	font-size: 1.5em;
+	color: var(--seeds-orange);
+	padding-top: 0;
+	font-weight: 100;
+}
+
+.call-to-action .inner {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.call-to-action .call-to-action-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media screen and ( min-width: 48em ) {
+	.call-to-action {
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	    background-size: cover;
+	    background-position: center center;
+	    background-clip: padding-box;
+	}
+
+	.call-to-action {
+		height: 312px;
+	}
+}
+
+@media screen and ( max-width: 48em ) { 
+	.call-to-action {
+		background-image: none !important;
+	}
 }
 
 /******** SOCIAL NAVIGATION ********/
