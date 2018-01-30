@@ -184,7 +184,32 @@ header.seeds-subtitle-header .inner {
 }
 
 /******** HEADER ********/
-@media screen and ( min-width: 67em ) {
+
+/* Tablet */
+@media screen and ( min-width: 48em ) {
+	.custom-header {
+		margin-bottom: 48px;
+	}
+}
+
+/* Tablet */
+@media screen and ( max-width: 48em ) {
+	.custom-header {
+		margin-bottom: 0px;
+	}
+}
+
+.site-branding {
+	padding: 1em 0;
+	text-align: center;
+}
+
+.custom-logo-link img {
+	max-height: 170px;
+}
+
+/******** SUBTITLE HEADER ********/
+@media screen and ( min-width: 48em ) {
 	.seeds-subtitle-header {
 		background-color: var(--seeds-orange);
 		background-repeat: no-repeat;
@@ -202,6 +227,12 @@ header.seeds-subtitle-header .inner {
 	.seeds-subtitle-header .inner h1 {
 		display: table-cell;
 	    vertical-align: middle;
+	}
+}
+
+@media screen and ( max-width: 48em ) { 
+	.seeds-subtitle-header {
+		background-image: none !important;
 	}
 }
 
