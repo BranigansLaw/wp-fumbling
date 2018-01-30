@@ -134,7 +134,7 @@ get_header(); ?>
 					$bottom_call_to_action_image_url = 
 						get_field('bottom_call_to_action_background') ?
 							get_field( 'bottom_call_to_action_background' )['url'] : 
-							get_field( 'call_to_action_button_text' )['url'];
+							get_field( 'call_to_action_background' )['url'];
 
 				?>
 				<section class="call-to-action lower" style="background-image: url('<?php echo $bottom_call_to_action_image_url ?>')">
