@@ -226,6 +226,10 @@ header.seeds-subtitle-header .inner {
 }
 
 /******** SUBTITLE HEADER ********/
+.seeds-subtitle-header-content .inner {
+	text-align: center;
+}
+
 @media screen and ( min-width: 48em ) {
 	.seeds-subtitle-header {
 		background-color: var(--seeds-orange);
@@ -258,11 +262,6 @@ header.seeds-subtitle-header .inner {
 	background-color: var(--seeds-orange);
 }
 
-.call-to-action {
-	text-align: center;
-	background: var(--seeds-green);
-}
-
 .call-to-action h2 {
 	margin-bottom: 0;
 	color: var(--seeds-white);
@@ -276,33 +275,41 @@ header.seeds-subtitle-header .inner {
 	font-weight: 100;
 }
 
-.call-to-action .inner {
+@media screen and ( min-width: 48em ) {
+	.call-to-action {
+		height: 312px;
+	}
+}
+
+/******** PARALLAX SECTION *********/
+.parallax {
+	text-align: center;
+	background: var(--seeds-green);
+}
+
+.parallax .inner {
 	display: table;
 	height: 100%;
 	width: 100%;
 }
 
-.call-to-action .call-to-action-content {
+.parallax .parallax-content {
 	display: table-cell;
 	vertical-align: middle;
 }
 
 @media screen and ( min-width: 48em ) {
-	.call-to-action {
+	.parallax {
 		background-attachment: fixed;
 		background-repeat: no-repeat;
 	    background-size: cover;
 	    background-position: center center;
 	    background-clip: padding-box;
 	}
-
-	.call-to-action {
-		height: 312px;
-	}
 }
 
 @media screen and ( max-width: 48em ) { 
-	.call-to-action {
+	.parallax {
 		background-image: none !important;
 	}
 }
@@ -359,4 +366,32 @@ footer.site-footer {
 .site-info .footer-page-title {
 	font-size: 1.65em;
 	font-family: Fjord One;
+}
+
+/******** SERVICES ********/
+.services {
+	text-align: center;
+}
+
+.pregnancy_treatments .inner {
+	max-width: initial;
+}
+
+.pregnancy_treatments h2 {
+	margin-bottom: 0;
+	color: var(--seeds-white);
+}
+
+.pregnancy_treatments h3 {
+	color: var(--seeds-orange);
+}
+
+.pregnancy_treatments p {
+	color: var(--seeds-white);
+}
+
+@media screen and ( min-width: 48em ) {
+	.pregnancy_treatments {
+		height: 360px;
+	}
 }

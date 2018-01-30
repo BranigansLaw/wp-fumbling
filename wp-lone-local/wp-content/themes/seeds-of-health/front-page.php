@@ -49,9 +49,9 @@ get_header(); ?>
 				<?php
 					$call_to_action_image_url = get_field('call_to_action_background')['url'];
 				?>
-				<section class="call-to-action upper" style="background-image: url('<?php echo $call_to_action_image_url ?>')">
+				<section class="parallax call-to-action upper" style="background-image: url('<?php echo $call_to_action_image_url ?>')">
 					<div class="inner">
-						<div class="call-to-action-content">
+						<div class="parallax-content">
 							<h2><?php the_field( 'call_to_action_title' ) ?></h2>
 							<h4><?php the_field( 'call_to_action_subtitle' ) ?></h4>
 							<a href="<?php the_field( 'call_to_action_target' ) ?>" class="btn btn-lg btn-primary">
@@ -137,9 +137,9 @@ get_header(); ?>
 							get_field( 'call_to_action_background' )['url'];
 
 				?>
-				<section class="call-to-action lower" style="background-image: url('<?php echo $bottom_call_to_action_image_url ?>')">
+				<section class="parallax call-to-action lower" style="background-image: url('<?php echo $bottom_call_to_action_image_url ?>')">
 					<div class="inner">
-						<div class="call-to-action-content">
+						<div class="parallax-content">
 							<h2><?php echo $bottom_call_to_action_title ?></h2>
 							<h4><?php echo $bottom_call_to_action_text ?></h4>
 							<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">

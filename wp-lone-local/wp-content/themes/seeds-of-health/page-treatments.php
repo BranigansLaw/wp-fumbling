@@ -34,13 +34,9 @@ get_header(); ?>
 				
 								// Start the loop.
 								while ( $services->have_posts() ) : $services->the_post();
-							?>
-								<div class="col-md-4">
-							<?php
+
 									get_template_part( 'template-parts/service/service-single', 'display' );
-							?>
-								</div>
-							<?php
+
 								endwhile;
 
 								wp_reset_postdata();
@@ -50,36 +46,44 @@ get_header(); ?>
 				</section>
 				<?php
 					if ( !get_field( 'pregnancy_only_treatments' ) ) :
+						$pregnancy_section_image_url = get_field('pregnancy_treatments_background')['url'];
 				?>
-					<section class="pregnancy_treatments">
+					<section class="parallax pregnancy_treatments" style="background-image: url('<?php echo $pregnancy_section_image_url ?>')">
 						<div class="inner">
-							<h2>Pregnancy</h2>
-							<div class="row">
-								<?php
-									$service_args = array(
-										'post_type'			=> 'services',
-										'post_status'		=> 'publish',
-										'posts_per_page'	=> -1,
-										'meta_key'			=> 'preganacy_service',
-										'meta_value'		=> 1
-									);
+							<div class="parallax-content">
+								<h2>Pregnancy</h2>
+								<div class="row">
+									<?php
+										$service_args = array(
+											'post_type'			=> 'services',
+											'post_status'		=> 'publish',
+											'posts_per_page'	=> -1,
+											'meta_key'			=> 'preganacy_service',
+											'meta_value'		=> 1
+										);
 
-									$services = new WP_Query( $service_args );
-					
-									// Start the loop.
-									while ( $services->have_posts() ) : $services->the_post();
-								?>
+										$services = new WP_Query( $service_args );
+						
+										// Start the loop.
+										while ( $services->have_posts() ) : $services->the_post();
+									?>
 
-								<div class="col-md-4">
-								<?php
-										get_template_part( 'template-parts/service/service-single', 'display' );
-								?>
+									<div class="col-md-3">
+									<?php
+											get_template_part( 'template-parts/service/service-single', 'display' );
+									?>
+									</div>
+									<?php
+										endwhile;
+
+										wp_reset_postdata();
+									?>
 								</div>
-								<?php
-									endwhile;
-
-									wp_reset_postdata();
-								?>
+								<div class="call-to-action">
+									<a href="<?php the_field( 'pregnancy_treatments_button_target' ) ?>" class="btn btn-primary">
+										<?php the_field( 'pregnancy_treatments_button_text' ) ?>
+									</a>
+								</div>
 							</div>
 						</div>
 					</section>
