@@ -25,7 +25,7 @@ get_header(); ?>
 				<section>
 					<div class="inner">
 			<?php
-				get_template_part( 'template-parts/faq/faq-single', 'display' );
+				get_template_part( 'template-parts/faq/faq-single', 'detail' );
 			?>
 					</div>
 				</section>
