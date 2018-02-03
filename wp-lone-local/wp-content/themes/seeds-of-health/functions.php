@@ -9,7 +9,7 @@ function theme_enqueue_styles() {
 
     	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array('bootstrap') );
 
-		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.9' );
+		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.10' );
 
     	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300%7CSource+Sans+Pro%7COpen+Sans%7CFjord+One%7COpen+Sans:700%7COpen+Sans:600%7CFjord+One:300%7CFjord+One:600' );
 
@@ -39,7 +39,7 @@ function enqueue_my_scripts() {
 	wp_enqueue_script( 'jssor-slider-js', get_stylesheet_directory_uri() . '/js/jssor.slider.min.js', array('bootstrap-js'), '1.0.0', true);
 
 	// Register theme JavaScript
-	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jssor-slider-js'), '1.0.2', true);
+	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jssor-slider-js'), '1.0.3', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 

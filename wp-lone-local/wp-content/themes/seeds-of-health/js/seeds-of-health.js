@@ -37,7 +37,7 @@
         $SlideshowOptions: {                                //[Optional] Options to specify and enable slideshow or not
             $Class: $JssorSlideshowRunner$,                 //[Required] Class to create instance of slideshow
             $Transitions: [
-            	{ $Duration: 1200, $Opacity: 2 }
+            	{ $Duration: 2000, $Opacity: 2 }
         	],            									//[Required] An array of slideshow transitions to play slideshow
             $TransitionsOrder: 1,                           //[Optional] The way to choose transition to play slide, 1 Sequence, 0 Random
             $ShowLink: true                                 //[Optional] Whether to bring slide link on top of the slider when slideshow is running, default value is false

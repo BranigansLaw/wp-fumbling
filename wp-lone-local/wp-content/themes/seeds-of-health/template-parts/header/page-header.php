@@ -16,7 +16,8 @@
     <div id="slider">
         <!-- Loading Screen -->
         <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
-            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="../svg/loading/static-svg/spin.svg" />
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" 
+            	 src="<?php echo get_stylesheet_directory_uri() ?>/svg/loading/static-svg/spin.svg" />
         </div>
 
         <!-- Slides Container -->
@@ -26,16 +27,16 @@
 			?>
 			
 			<div>
-				
+				<!-- <a href="google.com"> -->
 			<?php
 					$image = get_sub_field( 'image' );
-					$size = 'large';
+					$size = 'full';
 
 					if( $image ) {
 						echo wp_get_attachment_image( $image, $size, false, [ 'data-u' => 'image' ] );
 					}
 			?>
-				
+				<!-- </a> -->				
 			</div>
 				
 			<?php
@@ -52,17 +53,6 @@
         </div>
         <!--#endregion Bullet Navigator Skin End -->
     
-        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
-            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
-            </svg>
-        </div>
-        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
-            <svg viewBox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
-            </svg>
-        </div>
-        <!--#endregion Arrow Navigator Skin End -->
     </div>
     <!-- Jssor Slider End -->
 </header>

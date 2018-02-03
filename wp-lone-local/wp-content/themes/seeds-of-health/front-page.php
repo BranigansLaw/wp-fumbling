@@ -63,7 +63,7 @@ get_header(); ?>
 				<section class="benefits">
 					<div class="inner">
 						<h2><?php the_field( 'benefits_title' ) ?></h2>
-						<h4><?php the_field( 'benefits_subtitle' ) ?></h4>
+						<p class="header"><?php the_field( 'benefits_subtitle' ) ?></p>
 						<?php 
 							if ( have_rows( 'benefits' ) ) : 
 								while ( have_rows('benefits') ) : the_row();
