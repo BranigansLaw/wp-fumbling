@@ -9,7 +9,7 @@ function theme_enqueue_styles() {
 
     	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array('bootstrap') );
 
-		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.8' );
+		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.9' );
 
     	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300%7CSource+Sans+Pro%7COpen+Sans%7CFjord+One%7COpen+Sans:700%7COpen+Sans:600%7CFjord+One:300%7CFjord+One:600' );
 

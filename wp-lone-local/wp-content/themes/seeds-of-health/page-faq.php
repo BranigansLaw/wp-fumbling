@@ -18,32 +18,50 @@ get_header(); ?>
 			?>
 				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
-				<section class="services">
-					<div class="inner">
-						<div class="row">
+				<section class="faq">
+					<div class="inner">						
+						<?php
+							$service_args = array(
+								'post_type'			=> get_field_object( 'faq_type' )['value'],
+								'post_status'		=> 'publish',
+								'posts_per_page'	=> -1
+							);
+
+							$services = new WP_Query( $service_args );
+
+							$count = 0;
+			
+							// Start the loop.
+							while ( $services->have_posts() ) : $services->the_post(); 
+
+								if ( $count % 2 == 0 ) : ?>
+
+								<div class="row">
+
 							<?php
-								$service_args = array(
-									'post_type'			=> get_field_object( 'faq_type' )['value'],
-									'post_status'		=> 'publish',
-									'posts_per_page'	=> -1
-								);
+								endif;
+						?>
 
-								$services = new WP_Query( $service_args );
-				
-								// Start the loop.
-								while ( $services->have_posts() ) : $services->the_post(); 
-							?>
+							<div class="col-md-6">
+								<?php get_template_part( 'template-parts/faq/faq-single', 'display' ); ?>
+							</div>
 
-								<div class="col-md-6">
-									<?php get_template_part( 'template-parts/faq/faq-single', 'display' ); ?>
+						<?php
+
+								if ( $count % 2 == 1 ) : ?>
+
 								</div>
 
 							<?php
-								endwhile;
 
-								wp_reset_postdata();
-							?>
-						</div>
+								endif;
+
+							$count++;
+
+							endwhile;
+
+							wp_reset_postdata();
+						?>
 					</div>
 				</section>
 

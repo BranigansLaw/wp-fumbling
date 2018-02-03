@@ -79,7 +79,7 @@ get_header(); ?>
 										wp_reset_postdata();
 									?>
 								</div>
-								<div class="call-to-action">
+								<div class="call-to-action-button">
 									<a href="<?php the_field( 'pregnancy_treatments_button_target' ) ?>" class="btn btn-primary">
 										<?php the_field( 'pregnancy_treatments_button_text' ) ?>
 									</a>

@@ -13,8 +13,8 @@
 	<div class="footer-page-title"><?php bloginfo( 'name' ); ?></div>
 	<div>
 		<span class="address"><?php echo get_theme_mod( 'company_address' ); ?></span> | 
-		T. <span class="phone"><?php echo get_theme_mod( 'company_phone' ); ?></span> | 
-		E. <span class="email"><?php echo get_theme_mod( 'company_email' ); ?></span>
+		T. <span class="phone"><a href="tel:+1<?php echo get_theme_mod( 'company_phone' ) ?>"><?php echo get_theme_mod( 'company_phone' ); ?></a></span> | 
+		E. <span class="email"><a href="mailto:<?php echo get_theme_mod( 'company_email' ); ?>"><?php echo get_theme_mod( 'company_email' ); ?></a></span>
 	</div>
 	<div>Copyright 2018 Seeds of Health Acupuncture</div>
 </div><!-- .site-info -->
