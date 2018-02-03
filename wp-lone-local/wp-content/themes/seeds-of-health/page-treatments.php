@@ -63,17 +63,36 @@ get_header(); ?>
 										);
 
 										$services = new WP_Query( $service_args );
+
+										$num_columns = 4;
+
+										$count = 0;
 						
 										// Start the loop.
 										while ( $services->have_posts() ) : $services->the_post();
+
+											if ( $count % $num_columns == 0 ) :
+									?>
+												<div class="row">
+									<?php
+											endif;
 									?>
 
-									<div class="col-md-3">
+									<div class="col-md-<?php echo 12 / $num_columns ?>">
 									<?php
 											get_template_part( 'template-parts/service/service-single', 'display' );
 									?>
 									</div>
 									<?php
+											if ( $count % $num_columns == ( $num_columns - 1 ) ) :
+									?>
+
+												</div>
+									<?php
+											endif;
+
+											$count++;
+
 										endwhile;
 
 										wp_reset_postdata();

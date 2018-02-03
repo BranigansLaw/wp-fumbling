@@ -11,6 +11,6 @@
 <article class="service">
 	<h3><?php the_title() ?></h3>
 	<div>
-		<?php the_content() ?>
+		<?php the_content( '<a class="btn btn-sm" href="' . get_permalink() . '">Learn More</a>' ) ?>
 	</div>
 </article>
