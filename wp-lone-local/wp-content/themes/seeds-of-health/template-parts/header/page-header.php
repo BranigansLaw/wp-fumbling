@@ -21,15 +21,26 @@
 
         <!-- Slides Container -->
         <div data-u="slides">
-	        <div>
-	            <img data-u="image" src="http://localhost/wp-fumbling/wp-lone-local/wp-content/uploads/2018/01/HomeDesktopSlide2.jpg" />
-	        </div>
-	        <div>
-	            <img data-u="image" src="http://localhost/wp-fumbling/wp-lone-local/wp-content/uploads/2018/01/chinese-medicine-1024x684.jpg" />
-	        </div>
-	        <div>
-	            <img data-u="image" src="http://localhost/wp-fumbling/wp-lone-local/wp-content/uploads/2018/01/acupuncture-300x200.jpg" />
-	        </div>
+			<?php
+				while ( have_rows( 'slider_images' ) ) : the_row();
+			?>
+			
+			<div>
+				
+			<?php
+					$image = get_sub_field( 'image' );
+					$size = 'large';
+
+					if( $image ) {
+						echo wp_get_attachment_image( $image, $size, false, [ 'data-u' => 'image' ] );
+					}
+			?>
+				
+			</div>
+				
+			<?php
+				endwhile;
+			?>
         </div>
         
         <div data-u="navigator" class="jssorb031" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">

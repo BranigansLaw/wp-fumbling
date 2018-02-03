@@ -1,0 +1,91 @@
+0001.250 (R) [notice] Looking for db archive: file name: backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-db.gz
+0001.251 (R) [notice] Archive is expected to be size: 167.6 KB: OK
+0001.255 (R) [notice] Looking for plugins archive: file name: backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-plugins.zip
+0001.255 (R) [notice] Archive is expected to be size: 21612.7 KB: OK
+0001.257 (R) [notice] Looking for themes archive: file name: backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-themes.zip
+0001.258 (R) [notice] Archive is expected to be size: 981.2 KB: OK
+0001.260 (R) [notice] Looking for uploads archive: file name: backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-uploads.zip
+0001.261 (R) [notice] Archive is expected to be size: 5567.6 KB: OK
+0001.263 (R) [notice] Looking for others archive: file name: backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-others.zip
+0001.263 (R) [notice] Archive is expected to be size: 915.3 KB: OK
+0001.272 (R) [notice] Unpacking backup... (backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-db.gz, 0.2 Mb)
+0001.279 (R) [notice] Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0001.309 (R) [notice] Enabling Maintenance mode&#8230;
+0001.315 (R) [notice] Backup of: http://seedsofhealth.tyficonsulting.com
+0001.321 (R) [notice] Content URL: http://seedsofhealth.tyficonsulting.com/wp-content
+0001.321 (R) [notice] Uploads URL: http://seedsofhealth.tyficonsulting.com/wp-content/uploads
+0001.322 (R) [notice] Old table prefix: wp_
+0001.322 (R) [notice] Site information: multisite = 0
+0001.325 (R) [notice] New table prefix: wp_
+0001.338 (R) [notice] Processing table (MyISAM):  wp_options
+0002.965 (R) [notice] Search and replacing table: wp_options: rows: 499
+0003.296 (R) [notice] Processing table (MyISAM):  wp_users
+0003.345 (R) [notice] Search and replacing table: wp_users: rows: 2
+0003.347 (R) [notice] Processing table (MyISAM):  wp_usermeta
+0003.392 (R) [notice] Search and replacing table: wp_usermeta: rows: 58
+0003.407 (R) [notice] Processing table (MyISAM):  wp_commentmeta
+0003.442 (R) [notice] Search and replacing table: wp_commentmeta: rows: 0
+0003.442 (R) [notice] Processing table (MyISAM):  wp_comments
+0003.479 (R) [notice] Search and replacing table: wp_comments: rows: 1
+0003.480 (R) [notice] Processing table (MyISAM):  wp_links
+0003.522 (R) [notice] Search and replacing table: wp_links: rows: 0
+0003.522 (R) [notice] Processing table (MyISAM):  wp_postmeta
+0003.639 (R) [notice] Search and replacing table: wp_postmeta: rows: 5
+0003.642 (R) [notice] Processing table (MyISAM):  wp_posts
+0003.694 (R) [notice] Search and replacing table: wp_posts: rows: 122
+0003.771 (R) [notice] Processing table (MyISAM):  wp_term_relationships
+0003.811 (R) [notice] Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0003.811 (R) [notice] Processing table (MyISAM):  wp_term_taxonomy
+0003.847 (R) [notice] Search and replacing table: wp_term_taxonomy: rows: 2
+0003.849 (R) [notice] Processing table (MyISAM):  wp_termmeta
+0003.880 (R) [notice] Search and replacing table: wp_termmeta: rows: 0
+0003.880 (R) [notice] Processing table (MyISAM):  wp_terms
+0003.922 (R) [notice] Search and replacing table: wp_terms: rows: 2
+0003.923 (R) [notice] Processing table (MyISAM):  wp_yoast_seo_links
+0003.967 (R) [notice] Search and replacing table: wp_yoast_seo_links: rows: 2
+0003.969 (R) [notice] Processing table (MyISAM):  wp_yoast_seo_meta
+0003.994 (R) [notice] Disabling Maintenance mode&#8230;
+0004.009 (R) [notice] Search and replacing table: wp_yoast_seo_meta: rows: 60
+0004.021 (R) [notice] Finished: lines processed: 49 in 2.74 seconds
+0004.021 (R) [notice] Cleaning up rubbish...
+0004.029 (R) [notice] Database search and replace: replace http://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0004.030 (R) [notice] Database search and replace: replace https://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0004.031 (R) [notice] Search and replacing table: wp_commentmeta: already done
+0004.031 (R) [notice] Search and replacing table: wp_comments: already done
+0004.031 (R) [notice] Search and replacing table: wp_links: already done
+0004.031 (R) [notice] Search and replacing table: wp_options: already done
+0004.031 (R) [notice] Search and replacing table: wp_postmeta: already done
+0004.031 (R) [notice] Search and replacing table: wp_posts: already done
+0004.031 (R) [notice] Search and replacing table: wp_term_relationships: already done
+0004.032 (R) [notice] Search and replacing table: wp_term_taxonomy: already done
+0004.032 (R) [notice] Search and replacing table: wp_termmeta: already done
+0004.032 (R) [notice] Search and replacing table: wp_terms: already done
+0004.032 (R) [notice] Search and replacing table: wp_usermeta: already done
+0004.032 (R) [notice] Search and replacing table: wp_users: already done
+0004.032 (R) [notice] Search and replacing table: wp_yoast_seo_links: already done
+0004.032 (R) [notice] Search and replacing table: wp_yoast_seo_meta: already done
+0004.033 (R) [notice] Tables examined: 13
+0004.033 (R) [notice] Rows examined: 753
+0004.033 (R) [notice] Changes made: 34
+0004.033 (R) [notice] SQL update commands run: 34
+0004.033 (R) [notice] Errors: 0
+0004.033 (R) [notice] Time taken (seconds): 0.527
+0004.051 (R) [notice] Unpacking backup... (backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-plugins.zip, 21.1 Mb)
+0062.794 (R) [notice] Moving old data out of the way...
+0064.893 (R) [notice] Moving unpacked backup into place...
+0066.650 (R) [notice] Cleaning up rubbish...
+0066.652 (R) [notice] Disabled this plugin: W3 Total Cache: re-activate it manually when you are ready.
+0066.661 (R) [notice] Unpacking backup... (backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-themes.zip, 1 Mb)
+0067.830 (R) [notice] Moving old data out of the way...
+0067.920 (R) [notice] Moving unpacked backup into place...
+0067.943 (R) [notice] Cleaning up rubbish...
+0067.949 (R) [notice] Unpacking backup... (backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-uploads.zip, 5.4 Mb)
+0068.222 (R) [notice] Moving old data out of the way...
+0068.242 (R) [notice] Moving unpacked backup into place...
+0068.256 (R) [notice] Cleaning up rubbish...
+0068.262 (R) [notice] Unpacking backup... (backup_2018-02-03-1424_Seeds_of_Health_Acupuncture_d074c3c02165-others.zip, 0.9 Mb)
+0068.522 (R) [notice] Cleaning up rubbish...
+0068.523 (R) [notice] Error: Failed to delete working directory after restoring. (C:/wamp64/www/wp-fumbling/wp-lone-local/wp-content/upgrade/f4657727)
+0068.523 (R) [notice] Files found:
+0068.523 (R) [notice] * upgrade
+0068.537 (R) [notice] Restore successful!
