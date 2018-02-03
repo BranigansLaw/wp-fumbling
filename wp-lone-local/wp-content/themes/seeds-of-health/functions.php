@@ -18,14 +18,6 @@ function theme_enqueue_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
-function body_begin() {
-	do_action('body_begin');
-}
-
-function before_scripts() {
-	do_action('before_scripts');
-}
-
 function enqueue_my_scripts() {
 	// Reregister jQuery so it is modern, uses CDN, and is at the bottom
 	wp_deregister_script( 'jquery' );
@@ -49,23 +41,6 @@ function enqueue_my_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 
-function seeds_register_google_tag_manager_header_snippet() {
-?>
-<!-- Google Tag Manager -->
-
-<!-- End Google Tag Manager -->
-<?php
-}
-add_action( 'before_scripts', 'seeds_register_google_tag_manager_header_snippet' );
-
-function seeds_register_google_tag_manager_body_snippet() {
-?>
-<!-- Google Tag Manager (noscript) -->
-
-<?php
-}
-add_action( 'body_begin', 'seeds_register_google_tag_manager_body_snippet' );
-
 function seedsofhealth_customize_register( $wp_customize ) {
 	/**
 	 * Company Info Options.
@@ -73,6 +48,14 @@ function seedsofhealth_customize_register( $wp_customize ) {
 	$wp_customize->add_section( 'company_info_options', array(
 		'title'    => __( 'Company Info', 'seedsofhealth' ),
 		'priority' => 140, // Before Additional CSS.
+	) );
+
+	/**
+	 * Company Info Options.
+	 */
+	$wp_customize->add_section( 'google_tag_manager_options', array(
+		'title'    => __( 'Google Tag Manager', 'seedsofhealth' ),
+		'priority' => 160, // Before Additional CSS.
 	) );
 
 	$wp_customize->add_setting( 'company_address' );
@@ -118,6 +101,24 @@ function seedsofhealth_customize_register( $wp_customize ) {
 		'section'     => 'company_info_options',
 		'type'        => 'text',
 		'description' => __( 'LinkedIn of the company.', 'seedsofhealth' ),
+	) );
+
+	$wp_customize->add_setting( 'tagmanger_head' );
+
+	$wp_customize->add_control( 'tagmanger_head', array(
+		'label'       => __( 'Google Tag Manager Head', 'seedsofhealth' ),
+		'section'     => 'google_tag_manager_options',
+		'type'        => 'textarea',
+		'description' => __( 'The head block for Google Tag Manager.', 'seedsofhealth' ),
+	) );
+
+	$wp_customize->add_setting( 'tagmanger_body' );
+
+	$wp_customize->add_control( 'tagmanger_body', array(
+		'label'       => __( 'Google Tag Manager Body', 'seedsofhealth' ),
+		'section'     => 'google_tag_manager_options',
+		'type'        => 'textarea',
+		'description' => __( 'The body block for Google Tag Manager.', 'seedsofhealth' ),
 	) );
 
 }
