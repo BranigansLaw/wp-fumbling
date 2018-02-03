@@ -35,8 +35,11 @@ function enqueue_my_scripts() {
 	// Register Bootstrap
 	wp_enqueue_script( 'bootstrap-js', '//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js', array('jquery'), null, true); // all the bootstrap javascript goodness
 
+	// Register the slider
+	wp_enqueue_script( 'jssor-slider-js', get_stylesheet_directory_uri() . '/js/jssor.slider.min.js', array('bootstrap-js'), '1.0.0', true);
+
 	// Register theme JavaScript
-	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jquery'), '1.0.2', true);
+	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('jssor-slider-js'), '1.0.2', true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_my_scripts');
 
