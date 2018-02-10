@@ -1,0 +1,294 @@
+0000.001 (0) Opened log file at time: Sat, 10 Feb 2018 21:11:58 +0000 on http://localhost/wp-fumbling/wp-lone-local
+0000.004 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.14.3 WP: 4.9.2 PHP: 5.6.25 (apache2handler, Windows NT LAPTOP-EEKB869K 10.0 build 16299 (Windows 10) AMD64) MySQL: 5.7.14 WPLANG: en_CA Server: Apache/2.4.23 (Win64) PHP/5.6.25 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 84.5M | 85.5M) multisite: N openssl: OpenSSL 1.0.1t  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0000.006 (0) Free space on disk containing Updraft's temporary directory: 319393.3 MB
+0000.020 (0) Deleting old temporary file: log.7ce68fa782b6-browser.txt
+0000.026 (0) Tasks: Backup files: 1 (schedule: weekly) Backup DB:  (schedule: weekly)
+0000.029 (0) Processed schedules. Combining jobs from identical schedules. Tasks now: Backup files: 1 Backup DB: 1
+0000.034 (0) Requesting semaphore lock (fd) (apparently via scheduler: last_scheduled_action_called_at=1518236468, seconds_ago=60650)
+0000.036 (0) Semaphore (fd, wp_options) was stuck, set lock time to 2018-02-10 21:11:58
+0000.039 (0) Semaphore (fd, wp_options) reset to 1
+0000.041 (0) Set semaphore last lock (fd) time to 2018-02-10 21:11:58
+0000.043 (0) Semaphore lock (fd) complete
+0000.050 (0) Backup run: resumption=0, nonce=9ae9945c0f4d, begun at=1518297118 (0s ago), job type=backup
+0000.053 (0) Scheduling a resumption (1) after 300 seconds (1518297418) in case this run gets aborted
+0000.065 (0) Checking if we have a zip executable available
+0000.070 (0) Creation of backups of directories: beginning
+0000.081 (0) Beginning creation of dump of plugins (split every: 25 MB)
+0004.360 (0) Total entities for the zip file: 708 directories, 5156 files (0 skipped as non-modified), 65.9 MB
+0004.377 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0004.471 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 100 files added (on-disk size: 115.2 KB)
+0004.540 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 200 files added (on-disk size: 115.2 KB)
+0004.614 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 300 files added (on-disk size: 115.2 KB)
+0004.683 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 400 files added (on-disk size: 115.2 KB)
+0004.755 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 500 files added (on-disk size: 115.2 KB)
+0004.758 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.7 MB, 5156 files batched, 501 (502) added so far); re-opening (prior size: 115.2 KB)
+0005.308 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 600 files added (on-disk size: 2886.1 KB)
+0005.400 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 700 files added (on-disk size: 2886.1 KB)
+0005.498 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 800 files added (on-disk size: 2886.1 KB)
+0005.593 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 900 files added (on-disk size: 2886.1 KB)
+0005.688 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1000 files added (on-disk size: 2886.1 KB)
+0005.693 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.1 MB, 5156 files batched, 501 (1003) added so far); re-opening (prior size: 2886.1 KB)
+0006.521 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1100 files added (on-disk size: 5438.1 KB)
+0006.614 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1200 files added (on-disk size: 5438.1 KB)
+0006.706 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1300 files added (on-disk size: 5438.1 KB)
+0006.810 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1400 files added (on-disk size: 5438.1 KB)
+0006.913 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1500 files added (on-disk size: 5438.1 KB)
+0006.920 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.1 MB, 5156 files batched, 501 (1504) added so far); re-opening (prior size: 5438.1 KB)
+0007.345 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1600 files added (on-disk size: 6755.5 KB)
+0007.428 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1700 files added (on-disk size: 6755.5 KB)
+0007.512 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1800 files added (on-disk size: 6755.5 KB)
+0007.595 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 1900 files added (on-disk size: 6755.5 KB)
+0007.678 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2000 files added (on-disk size: 6755.5 KB)
+0007.686 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.3 MB, 5156 files batched, 501 (2005) added so far); re-opening (prior size: 6755.5 KB)
+0009.322 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2100 files added (on-disk size: 13348.2 KB)
+0009.476 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2200 files added (on-disk size: 13348.2 KB)
+0009.610 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2300 files added (on-disk size: 13348.2 KB)
+0009.760 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2400 files added (on-disk size: 13348.2 KB)
+0009.934 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2500 files added (on-disk size: 13348.2 KB)
+0009.945 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 5156 files batched, 501 (2506) added so far); re-opening (prior size: 13348.2 KB)
+0010.357 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2600 files added (on-disk size: 14046.5 KB)
+0010.499 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2700 files added (on-disk size: 14046.5 KB)
+0010.648 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2800 files added (on-disk size: 14046.5 KB)
+0010.763 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 2900 files added (on-disk size: 14046.5 KB)
+0010.833 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3000 files added (on-disk size: 14046.5 KB)
+0010.840 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.6 MB, 5156 files batched, 501 (3007) added so far); re-opening (prior size: 14046.5 KB)
+0011.303 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3100 files added (on-disk size: 14858.7 KB)
+0011.385 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3200 files added (on-disk size: 14858.7 KB)
+0011.499 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3300 files added (on-disk size: 14858.7 KB)
+0011.623 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3400 files added (on-disk size: 14858.7 KB)
+0011.756 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3500 files added (on-disk size: 14858.7 KB)
+0011.769 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.8 MB, 5156 files batched, 501 (3508) added so far); re-opening (prior size: 14858.7 KB)
+0012.234 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3600 files added (on-disk size: 15971.9 KB)
+0012.314 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3700 files added (on-disk size: 15971.9 KB)
+0012.392 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3800 files added (on-disk size: 15971.9 KB)
+0012.484 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 3900 files added (on-disk size: 15971.9 KB)
+0012.571 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4000 files added (on-disk size: 15971.9 KB)
+0012.581 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.5 MB, 5156 files batched, 501 (4009) added so far); re-opening (prior size: 15971.9 KB)
+0013.006 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4100 files added (on-disk size: 17267.7 KB)
+0013.090 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4200 files added (on-disk size: 17267.7 KB)
+0013.193 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4300 files added (on-disk size: 17267.7 KB)
+0013.285 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4400 files added (on-disk size: 17267.7 KB)
+0013.381 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4500 files added (on-disk size: 17267.7 KB)
+0013.398 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (8.2 MB, 5156 files batched, 501 (4510) added so far); re-opening (prior size: 17267.7 KB)
+0015.738 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4600 files added (on-disk size: 20730.3 KB)
+0015.831 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4700 files added (on-disk size: 20730.3 KB)
+0015.916 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4800 files added (on-disk size: 20730.3 KB)
+0016.014 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 4900 files added (on-disk size: 20730.3 KB)
+0016.105 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 5000 files added (on-disk size: 20730.3 KB)
+0016.120 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (6.7 MB, 5156 files batched, 501 (5011) added so far); re-opening (prior size: 20730.3 KB)
+0017.078 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip.tmp: 5100 files added (on-disk size: 23132 KB)
+0017.661 (0) Created plugins zip (0) - 24897.6 KB in 17.6 s (1417.7 KB/s) (sha1: 16979d41ebae11614aa306989aff1d1c1f6d93bb, sha256: 2ea19f88a50df6b90e0f231662a5c529214f5d29257d4f76a3d7765e3e33a9de)
+0017.667 (0) Deleting old temporary file: log.ef4be6a73fff-browser.txt
+0017.677 (0) Beginning creation of dump of themes (split every: 25 MB)
+0017.743 (0) Total entities for the zip file: 25 directories, 83 files (0 skipped as non-modified), 1.2 MB
+0017.889 (0) Created themes zip (0) - 978.2 KB in 0.2 s (4963.4 KB/s) (sha1: a73dd8d8e58cc1e36997b027ebdfa09898472269, sha256: 79697b925364e121b3581a5f1d822a2e0d9aa53979a3c77d73232fb7c46f5764)
+0017.900 (0) Exclusion option setting (uploads): 
+0017.902 (0) Looking for candidates to back up in: C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/uploads
+0017.904 (0) finding files: 2017: adding to list (1)
+0017.906 (0) finding files: 2018: adding to list (2)
+0017.907 (0) Beginning creation of dump of uploads (split every: 25 MB)
+0017.953 (0) Total entities for the zip file: 5 directories, 70 files (0 skipped as non-modified), 5.1 MB
+0018.275 (0) Created uploads zip (0) - 5180.2 KB in 0.4 s (14755.5 KB/s) (sha1: 2bfefae60c9d5da30bf8bb931506a9544ef4dd9f, sha256: 7601e6307c35ad353d1d4857ec9596dbe656c8db6ed9a77ebe78cd1823cf6ed2)
+0018.283 (0) Beginning backup of other directories found in the content directory (index: 0)
+0018.285 (0) Exclusion option setting (others): 
+0018.286 (0) Looking for candidates to back up in: C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content
+0018.288 (0) finding files: advanced-cache-backup.php: adding to list (1)
+0018.290 (0) finding files: advanced-cache.php: adding to list (2)
+0018.291 (0) finding files: advanced-cache.php-old: adding to list (3)
+0018.293 (0) finding files: cache: adding to list (4)
+0018.295 (0) finding files: cache-old: adding to list (5)
+0018.296 (0) finding files: index.php: adding to list (6)
+0018.298 (0) finding files: index.php-old: adding to list (7)
+0018.300 (0) finding files: languages: adding to list (8)
+0018.301 (0) finding files: languages-old: adding to list (9)
+0018.303 (0) finding files: mu-plugins: adding to list (10)
+0018.305 (0) finding files: mu-plugins-old: adding to list (11)
+0018.306 (0) finding files: plugins: skipping: this is the plugins directory
+0018.308 (0) finding files: plugins-old: adding to list (12)
+0018.310 (0) finding files: themes: skipping: this is the themes directory
+0018.311 (0) finding files: themes-old: adding to list (13)
+0018.313 (0) finding files: updraft: skipping: this is the updraft directory
+0018.315 (0) finding files: upgrade: adding to list (14)
+0018.317 (0) finding files: uploads: skipping: this is the uploads directory
+0018.319 (0) finding files: uploads-old: adding to list (15)
+0018.321 (0) finding files: w3tc-config: adding to list (16)
+0018.322 (0) finding files: w3tc-config-old: adding to list (17)
+0018.324 (0) finding files: wflogs: adding to list (18)
+0018.325 (0) finding files: wflogs-old: adding to list (19)
+0018.409 (0) Total entities for the zip file: 33 directories, 125 files (0 skipped as non-modified), 8.6 MB
+0018.467 (0) Zip: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0019.257 (0) Created others zip (0) - 2423 KB in 0.9 s (2637 KB/s) (sha1: 45f6dc015362112261c1f9e060d53d2bd0071d86, sha256: 5dec77535b4de1f2fc90667adc69be29491ff151cf0fdcfdcff9f0695a7ded46)
+0019.271 (0) Saving backup status to database (elements: 8)
+0019.276 (0) Beginning creation of database dump (WordPress DB)
+0019.301 (0) Table wp_options: Total expected rows (approximate): 438
+0019.346 (0) Table wp_options: Total rows added: 433 in 0.04 seconds
+0019.353 (0) Table wp_options: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_options.table.gz - 36.1 KB)
+0019.363 (0) Table wp_users: Total expected rows (approximate): 2
+0019.367 (0) Table wp_users: Total rows added: 2 in 0.00 seconds
+0019.373 (0) Table wp_users: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_users.table.gz - 0.6 KB)
+0019.383 (0) Table wp_usermeta: Total expected rows (approximate): 57
+0019.389 (0) Table wp_usermeta: Total rows added: 57 in 0.00 seconds
+0019.395 (0) Table wp_usermeta: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_usermeta.table.gz - 3.1 KB)
+0019.404 (0) Table wp_commentmeta: Total expected rows (approximate): 0
+0019.408 (0) Table wp_commentmeta: Total rows added: 0 in 0.00 seconds
+0019.413 (0) Table wp_commentmeta: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0019.424 (0) Table wp_comments: Total expected rows (approximate): 1
+0019.429 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0019.434 (0) Table wp_comments: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_comments.table.gz - 0.7 KB)
+0019.444 (0) Table wp_links: Total expected rows (approximate): 0
+0019.448 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0019.454 (0) Table wp_links: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_links.table.gz - 0.4 KB)
+0019.463 (0) Table wp_postmeta: Total expected rows (approximate): 2150
+0019.547 (0) Table wp_postmeta: Total rows added: 2150 in 0.08 seconds
+0019.554 (0) Table wp_postmeta: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_postmeta.table.gz - 31.6 KB)
+0019.563 (0) Table wp_posts: Total expected rows (approximate): 176
+0019.608 (0) Table wp_posts: Total rows added: 176 in 0.04 seconds
+0019.616 (0) Table wp_posts: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_posts.table.gz - 21.3 KB)
+0019.626 (0) Table wp_term_relationships: Total expected rows (approximate): 9
+0019.630 (0) Table wp_term_relationships: Total rows added: 9 in 0.00 seconds
+0019.636 (0) Table wp_term_relationships: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0019.645 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0019.649 (0) Table wp_term_taxonomy: Total rows added: 2 in 0.00 seconds
+0019.655 (0) Table wp_term_taxonomy: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0019.665 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0019.670 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0019.677 (0) Table wp_termmeta: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_termmeta.table.gz - 0.4 KB)
+0019.687 (0) Table wp_terms: Total expected rows (approximate): 2
+0019.690 (0) Table wp_terms: Total rows added: 2 in 0.00 seconds
+0019.696 (0) Table wp_terms: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_terms.table.gz - 0.4 KB)
+0019.704 (0) Table wp_wfbadleechers: Total expected rows (approximate): 0
+0019.708 (0) Table wp_wfbadleechers: Total rows added: 0 in 0.00 seconds
+0019.713 (0) Table wp_wfbadleechers: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfbadleechers.table.gz - 0.3 KB)
+0019.723 (0) Table wp_wfblockedcommentlog: Total expected rows (approximate): 0
+0019.727 (0) Table wp_wfblockedcommentlog: Total rows added: 0 in 0.00 seconds
+0019.732 (0) Table wp_wfblockedcommentlog: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblockedcommentlog.table.gz - 0.3 KB)
+0019.742 (0) Table wp_wfblockediplog: Total expected rows (approximate): 0
+0019.746 (0) Table wp_wfblockediplog: Total rows added: 0 in 0.00 seconds
+0019.752 (0) Table wp_wfblockediplog: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblockediplog.table.gz - 0.3 KB)
+0019.761 (0) Table wp_wfblocks7: Total expected rows (approximate): 0
+0019.765 (0) Table wp_wfblocks7: Total rows added: 0 in 0.00 seconds
+0019.771 (0) Table wp_wfblocks7: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblocks7.table.gz - 0.4 KB)
+0019.781 (0) Table wp_wfconfig: Total expected rows (approximate): 221
+0019.806 (0) Table wp_wfconfig: Total rows added: 221 in 0.02 seconds
+0019.813 (0) Table wp_wfconfig: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfconfig.table.gz - 235 KB)
+0019.823 (0) Table wp_wfcrawlers: Total expected rows (approximate): 3
+0019.826 (0) Table wp_wfcrawlers: Total rows added: 3 in 0.00 seconds
+0019.832 (0) Table wp_wfcrawlers: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfcrawlers.table.gz - 0.5 KB)
+0019.842 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0019.845 (0) Table wp_wffilechanges: Total rows added: 0 in 0.00 seconds
+0019.851 (0) Table wp_wffilechanges: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wffilechanges.table.gz - 0.3 KB)
+0019.862 (0) Table wp_wffilemods: Total expected rows (approximate): 5994
+0020.431 (0) Table wp_wffilemods: Total rows added: 5994 in 0.57 seconds
+0020.438 (0) Table wp_wffilemods: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wffilemods.table.gz - 469.6 KB)
+0020.450 (0) Table wp_wfhits: Total expected rows (approximate): 1399
+0020.615 (0) Table wp_wfhits: Total rows added: 1399 in 0.16 seconds
+0020.623 (0) Table wp_wfhits: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfhits.table.gz - 22 KB)
+0020.636 (0) Table wp_wfhoover: Total expected rows (approximate): 0
+0020.640 (0) Table wp_wfhoover: Total rows added: 0 in 0.00 seconds
+0020.648 (0) Table wp_wfhoover: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfhoover.table.gz - 0.3 KB)
+0020.659 (0) Table wp_wfissues: Total expected rows (approximate): 2
+0020.663 (0) Table wp_wfissues: Total rows added: 2 in 0.00 seconds
+0020.671 (0) Table wp_wfissues: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfissues.table.gz - 1.1 KB)
+0020.681 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 5994
+0020.842 (0) Table wp_wfknownfilelist: Total rows added: 5994 in 0.16 seconds
+0020.849 (0) Table wp_wfknownfilelist: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfknownfilelist.table.gz - 58.5 KB)
+0020.859 (0) Table wp_wfleechers: Total expected rows (approximate): 369
+0020.873 (0) Table wp_wfleechers: Total rows added: 369 in 0.01 seconds
+0020.881 (0) Table wp_wfleechers: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfleechers.table.gz - 1.4 KB)
+0020.890 (0) Table wp_wflocs: Total expected rows (approximate): 0
+0020.894 (0) Table wp_wflocs: Total rows added: 0 in 0.00 seconds
+0020.899 (0) Table wp_wflocs: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wflocs.table.gz - 0.4 KB)
+0020.908 (0) Table wp_wflogins: Total expected rows (approximate): 0
+0020.912 (0) Table wp_wflogins: Total rows added: 0 in 0.00 seconds
+0020.919 (0) Table wp_wflogins: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wflogins.table.gz - 0.4 KB)
+0020.931 (0) Table wp_wfnet404s: Total expected rows (approximate): 0
+0020.935 (0) Table wp_wfnet404s: Total rows added: 0 in 0.00 seconds
+0020.940 (0) Table wp_wfnet404s: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfnet404s.table.gz - 0.3 KB)
+0020.949 (0) Table wp_wfnotifications: Total expected rows (approximate): 3
+0020.953 (0) Table wp_wfnotifications: Total rows added: 3 in 0.00 seconds
+0020.959 (0) Table wp_wfnotifications: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfnotifications.table.gz - 0.6 KB)
+0020.967 (0) Table wp_wfpendingissues: Total expected rows (approximate): 0
+0020.972 (0) Table wp_wfpendingissues: Total rows added: 0 in 0.00 seconds
+0020.978 (0) Table wp_wfpendingissues: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfpendingissues.table.gz - 0.4 KB)
+0020.987 (0) Table wp_wfreversecache: Total expected rows (approximate): 0
+0020.991 (0) Table wp_wfreversecache: Total rows added: 0 in 0.00 seconds
+0020.997 (0) Table wp_wfreversecache: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfreversecache.table.gz - 0.3 KB)
+0021.007 (0) Table wp_wfscanners: Total expected rows (approximate): 0
+0021.010 (0) Table wp_wfscanners: Total rows added: 0 in 0.00 seconds
+0021.016 (0) Table wp_wfscanners: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfscanners.table.gz - 0.3 KB)
+0021.026 (0) Table wp_wfsnipcache: Total expected rows (approximate): 0
+0021.029 (0) Table wp_wfsnipcache: Total rows added: 0 in 0.00 seconds
+0021.035 (0) Table wp_wfsnipcache: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfsnipcache.table.gz - 0.4 KB)
+0021.044 (0) Table wp_wfstatus: Total expected rows (approximate): 320
+0021.065 (0) Table wp_wfstatus: Total rows added: 320 in 0.02 seconds
+0021.072 (0) Table wp_wfstatus: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfstatus.table.gz - 6.2 KB)
+0021.082 (0) Table wp_wfvulnscanners: Total expected rows (approximate): 0
+0021.086 (0) Table wp_wfvulnscanners: Total rows added: 0 in 0.00 seconds
+0021.091 (0) Table wp_wfvulnscanners: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfvulnscanners.table.gz - 0.3 KB)
+0021.100 (0) Table wp_yoast_seo_links: Total expected rows (approximate): 12
+0021.105 (0) Table wp_yoast_seo_links: Total rows added: 12 in 0.00 seconds
+0021.111 (0) Table wp_yoast_seo_links: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_yoast_seo_links.table.gz - 0.7 KB)
+0021.120 (0) Table wp_yoast_seo_meta: Total expected rows (approximate): 83
+0021.126 (0) Table wp_yoast_seo_meta: Total rows added: 83 in 0.00 seconds
+0021.132 (0) Table wp_yoast_seo_meta: finishing file (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_yoast_seo_meta.table.gz - 0.6 KB)
+0021.140 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_options.table.gz (1/37): adding to final database dump
+0021.152 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_users.table.gz (2/37): adding to final database dump
+0021.155 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_usermeta.table.gz (3/37): adding to final database dump
+0021.160 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_commentmeta.table.gz (4/37): adding to final database dump
+0021.164 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_comments.table.gz (5/37): adding to final database dump
+0021.168 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_links.table.gz (6/37): adding to final database dump
+0021.172 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_postmeta.table.gz (7/37): adding to final database dump
+0021.198 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_posts.table.gz (8/37): adding to final database dump
+0021.206 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_term_relationships.table.gz (9/37): adding to final database dump
+0021.209 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_term_taxonomy.table.gz (10/37): adding to final database dump
+0021.211 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_termmeta.table.gz (11/37): adding to final database dump
+0021.213 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_terms.table.gz (12/37): adding to final database dump
+0021.215 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfbadleechers.table.gz (13/37): adding to final database dump
+0021.217 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblockedcommentlog.table.gz (14/37): adding to final database dump
+0021.219 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblockediplog.table.gz (15/37): adding to final database dump
+0021.221 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfblocks7.table.gz (16/37): adding to final database dump
+0021.223 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfconfig.table.gz (17/37): adding to final database dump
+0021.239 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfcrawlers.table.gz (18/37): adding to final database dump
+0021.241 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wffilechanges.table.gz (19/37): adding to final database dump
+0021.244 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wffilemods.table.gz (20/37): adding to final database dump
+0021.336 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfhits.table.gz (21/37): adding to final database dump
+0021.355 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfhoover.table.gz (22/37): adding to final database dump
+0021.358 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfissues.table.gz (23/37): adding to final database dump
+0021.361 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfknownfilelist.table.gz (24/37): adding to final database dump
+0021.433 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfleechers.table.gz (25/37): adding to final database dump
+0021.439 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wflocs.table.gz (26/37): adding to final database dump
+0021.442 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wflogins.table.gz (27/37): adding to final database dump
+0021.445 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfnet404s.table.gz (28/37): adding to final database dump
+0021.447 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfnotifications.table.gz (29/37): adding to final database dump
+0021.450 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfpendingissues.table.gz (30/37): adding to final database dump
+0021.453 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfreversecache.table.gz (31/37): adding to final database dump
+0021.455 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfscanners.table.gz (32/37): adding to final database dump
+0021.458 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfsnipcache.table.gz (33/37): adding to final database dump
+0021.460 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfstatus.table.gz (34/37): adding to final database dump
+0021.466 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_wfvulnscanners.table.gz (35/37): adding to final database dump
+0021.469 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_yoast_seo_links.table.gz (36/37): adding to final database dump
+0021.472 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db-table-wp_yoast_seo_meta.table.gz (37/37): adding to final database dump
+0021.479 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db.gz: finished writing out complete database file (872 KB)
+0021.512 (0) Total database tables backed up: 37 (backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db.gz, size: 909484, sha256)
+0021.525 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0021.527 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0021.529 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0021.532 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-others.zip: others: This file has not yet been successfully uploaded: will queue
+0021.535 (0) backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db.gz: db: This file has not yet been successfully uploaded: will queue
+0021.537 (0) Saving backup history. Total backup size: 33.6 MB
+0021.543 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0021.550 (0) Cloud backup selection (1/1):  with instance (1/1) (last)
+0021.553 (0) No remote despatch: user chose no remote backup service
+0021.557 (0) Recording as successfully uploaded: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-plugins.zip (02e94302ea00c71ec1a608ebdaa3b75d)
+0021.566 (0) Recording as successfully uploaded: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-themes.zip (74e7caf8885b2aa2048dcef22dac26eb)
+0021.573 (0) Recording as successfully uploaded: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-uploads.zip (41ebf625d80f36181e47e1c50845bd14)
+0021.579 (0) Recording as successfully uploaded: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-others.zip (629491904d45629bfefbce44bbc93bf9)
+0021.589 (0) Recording as successfully uploaded: backup_2018-02-10-1411_Seeds_of_Health_Acupuncture_9ae9945c0f4d-db.gz (6631e1d63460c3839aab54d831cd423f)
+0021.594 (0) Prune old backups from local store: nothing to do, since the user disabled local deletion and we are using local backups
+0021.596 (0) Resume backup (9ae9945c0f4d, 0): finish run
+0021.602 (0) Decremented the semaphore (fd) by 1
+0021.604 (0) Semaphore (fd) unlocked
+0021.606 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0021.613 (0) The backup apparently succeeded and is now complete
+0021.616 (0) No email will/can be sent - the user has not configured an email address.
+0021.619 (0) The backup apparently succeeded and is now complete.

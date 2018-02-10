@@ -70,6 +70,7 @@
 <section class="seeds-subtitle-header-content">
 	<div class="inner">
 		<h2><?php the_field( 'subtitle' ) ?></h2>
+		<div class="subhead"><?php the_field( 'subhead' ) ?></div>
 		<div><?php the_content() ?></div>
 	</div>
 </section>

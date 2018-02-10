@@ -1,0 +1,189 @@
+0001.232 () Opened log file at time: Sat, 10 Feb 2018 21:09:29 +0000 on http://localhost/wp-fumbling/wp-lone-local
+0001.232 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.14.3.1 WP: 4.9.2 PHP: 5.6.25 (apache2handler, Windows NT LAPTOP-EEKB869K 10.0 build 16299 (Windows 10) AMD64) MySQL: 5.7.14 WPLANG: en_CA Server: Apache/2.4.23 (Win64) PHP/5.6.25 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 87.5M | 88M) multisite: N openssl: OpenSSL 1.0.1t  3 May 2016 mcrypt: Y LANG:  ZipArchive::addFile: Y
+0001.233 () Free space on disk containing Updraft's temporary directory: 319493.2 MB
+0001.237 () Restore job started. Entities to restore: plugins, themes, uploads, others, db. Restore options: {"updraft_restorer_replacesiteurl":"1","updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0001.277 () Entity: db
+0001.277 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-db.gz, type=db, info=a:0:{}, last_one=)
+0001.277 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-db.gz, 1 Mb)
+0001.284 () Database successfully unpacked
+0001.286 () Restoring the database (on a large site this can take a long time - if it times out (which can happen if your web hosting company has configured your hosting to limit resources) then you should use a different method, such as phpMyAdmin)...
+0001.286 () Using direct MySQL access; value of use_mysqli is: 1
+0001.314 () Max packet size: 32 MB
+0001.314 () Entering maintenance mode
+0001.314 () Enabling Maintenance mode&#8230;
+0001.318 () Backup of: http://seedsofhealth.tyficonsulting.com
+0001.328 () Content URL: http://seedsofhealth.tyficonsulting.com/wp-content
+0001.328 () Uploads URL: http://seedsofhealth.tyficonsulting.com/wp-content/uploads
+0001.328 () Old table prefix: wp_
+0001.328 () Site information: multisite=0
+0001.331 () New table prefix: wp_
+0001.348 () Processing table (MyISAM): wp_options
+0001.469 () Restoring prior UD configuration (table: wp_options; keys: 90)
+0003.028 () Search and replacing table: wp_options: rows: 790
+0003.385 () Processing table (MyISAM): wp_users
+0003.433 () Search and replacing table: wp_users: rows: 2
+0003.434 () Processing table (MyISAM): wp_usermeta
+0003.483 () Search and replacing table: wp_usermeta: rows: 58
+0003.499 () Processing table (MyISAM): wp_commentmeta
+0003.535 () Search and replacing table: wp_commentmeta: rows: 0
+0003.535 () Processing table (MyISAM): wp_comments
+0003.576 () Search and replacing table: wp_comments: rows: 1
+0003.577 () Processing table (MyISAM): wp_links
+0003.619 () Search and replacing table: wp_links: rows: 0
+0003.619 () Processing table (MyISAM): wp_postmeta
+0003.866 () Search and replacing table: wp_postmeta: rows: 10
+0003.871 () Processing table (MyISAM): wp_posts
+0003.941 () Skipping search/replace on GUID column in posts table
+0003.942 () Search and replacing table: wp_posts: rows: 177
+0004.057 () Processing table (MyISAM): wp_term_relationships
+0004.088 () Skipping this table: data in this table (wp_term_relationships) should not be search/replaced
+0004.088 () Processing table (MyISAM): wp_term_taxonomy
+0004.133 () Search and replacing table: wp_term_taxonomy: rows: 2
+0004.135 () Processing table (MyISAM): wp_termmeta
+0004.169 () Search and replacing table: wp_termmeta: rows: 0
+0004.169 () Processing table (MyISAM): wp_terms
+0004.201 () Search and replacing table: wp_terms: rows: 2
+0004.202 () Processing table (MyISAM): wp_wfBadLeechers
+0004.238 () Search and replacing table: wp_wfBadLeechers: rows: 0
+0004.238 () Processing table (MyISAM): wp_wfBlockedCommentLog
+0004.263 () Search and replacing table: wp_wfBlockedCommentLog: rows: 0
+0004.263 () Processing table (MyISAM): wp_wfBlockedIPLog
+0004.283 () Search and replacing table: wp_wfBlockedIPLog: rows: 0
+0004.283 () Processing table (MyISAM): wp_wfBlocks7
+0004.302 () Database queries processed: 50 in 3.01 seconds
+0004.306 () Search and replacing table: wp_wfBlocks7: rows: 0
+0004.306 () Processing table (MyISAM): wp_wfConfig
+0004.362 () Search and replacing table: wp_wfConfig: rows: 220
+0004.411 () Processing table (MyISAM): wp_wfCrawlers
+0004.443 () Search and replacing table: wp_wfCrawlers: rows: 3
+0004.445 () Processing table (MyISAM): wp_wfFileChanges
+0004.468 () Search and replacing table: wp_wfFileChanges: rows: 0
+0004.469 () Processing table (MyISAM): wp_wfFileMods
+0004.986 () Search and replacing table: wp_wfFileMods: rows: 5994
+0006.771 () Searching and replacing reached row: 5000
+0007.126 () Processing table (MyISAM): wp_wfHits
+0007.264 () Skipping this table: data in this table (wp_wfHits) should not be search/replaced
+0007.264 () Processing table (MyISAM): wp_wfHoover
+0007.286 () Search and replacing table: wp_wfHoover: rows: 0
+0007.286 () Processing table (MyISAM): wp_wfIssues
+0007.317 () Search and replacing table: wp_wfIssues: rows: 0
+0007.317 () Processing table (MyISAM): wp_wfKnownFileList
+0007.719 () Search and replacing table: wp_wfKnownFileList: rows: 5994
+0008.581 () Searching and replacing reached row: 5000
+0008.738 () Processing table (MyISAM): wp_wfLeechers
+0008.818 () Search and replacing table: wp_wfLeechers: rows: 701
+0009.013 () Processing table (MyISAM): wp_wfLocs
+0009.045 () Search and replacing table: wp_wfLocs: rows: 0
+0009.045 () Processing table (MyISAM): wp_wfLogins
+0009.067 () Search and replacing table: wp_wfLogins: rows: 0
+0009.067 () Processing table (MyISAM): wp_wfNet404s
+0009.089 () Search and replacing table: wp_wfNet404s: rows: 0
+0009.090 () Processing table (MyISAM): wp_wfNotifications
+0009.119 () Search and replacing table: wp_wfNotifications: rows: 1
+0009.120 () Processing table (MyISAM): wp_wfPendingIssues
+0009.149 () Search and replacing table: wp_wfPendingIssues: rows: 0
+0009.150 () Processing table (MyISAM): wp_wfReverseCache
+0009.177 () Search and replacing table: wp_wfReverseCache: rows: 0
+0009.177 () Processing table (MyISAM): wp_wfSNIPCache
+0009.197 () Database queries processed: 100 in 7.91 seconds
+0009.200 () Search and replacing table: wp_wfSNIPCache: rows: 0
+0009.200 () Processing table (MyISAM): wp_wfScanners
+0009.230 () Search and replacing table: wp_wfScanners: rows: 0
+0009.230 () Processing table (MyISAM): wp_wfStatus
+0009.285 () Search and replacing table: wp_wfStatus: rows: 312
+0009.358 () Processing table (MyISAM): wp_wfVulnScanners
+0009.465 () Search and replacing table: wp_wfVulnScanners: rows: 0
+0009.465 () Processing table (MyISAM): wp_yoast_seo_links
+0009.506 () Search and replacing table: wp_yoast_seo_links: rows: 12
+0009.510 () Processing table (MyISAM): wp_yoast_seo_meta
+0009.534 () Unlocking database and leaving maintenance mode
+0009.534 () Disabling Maintenance mode&#8230;
+0009.550 () Search and replacing table: wp_yoast_seo_meta: rows: 82
+0009.565 () Finished: lines processed: 115 in 8.27 seconds
+0009.566 () Cleaning up rubbish...
+0009.567 () Begin search and replace (updraftplus_restored_db)
+0009.567 () [Database-replace-site-url] Database: search and replace site URL
+0009.568 () Restored pre-migration site ID for this installation
+0009.575 () Database search and replace: replace http://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0009.575 () Database search and replace: replace https://seedsofhealth.tyficonsulting.com in backup dump with http://localhost/wp-fumbling/wp-lone-local
+0009.577 () Search and replacing table: wp_commentmeta: already done
+0009.577 () Search and replacing table: wp_comments: already done
+0009.577 () Search and replacing table: wp_links: already done
+0009.577 () Search and replacing table: wp_options: already done
+0009.577 () Search and replacing table: wp_postmeta: already done
+0009.578 () Search and replacing table: wp_posts: already done
+0009.578 () Search and replacing table: wp_term_relationships: already done
+0009.578 () Search and replacing table: wp_term_taxonomy: already done
+0009.578 () Search and replacing table: wp_termmeta: already done
+0009.578 () Search and replacing table: wp_terms: already done
+0009.578 () Search and replacing table: wp_usermeta: already done
+0009.578 () Search and replacing table: wp_users: already done
+0009.579 () Search and replacing table: wp_yoast_seo_links: already done
+0009.579 () Search and replacing table: wp_yoast_seo_meta: already done
+0009.580 () Search and replacing table: wp_wfbadleechers: rows: 0
+0009.582 () Search and replacing table: wp_wfblockedcommentlog: rows: 0
+0009.584 () Search and replacing table: wp_wfblockediplog: rows: 0
+0009.586 () Search and replacing table: wp_wfblocks7: rows: 0
+0009.588 () Search and replacing table: wp_wfconfig: rows: 220
+0009.637 () Search and replacing table: wp_wfcrawlers: rows: 3
+0009.640 () Search and replacing table: wp_wffilechanges: rows: 0
+0009.641 () Search and replacing table: wp_wffilemods: rows: 5994
+0011.521 () Searching and replacing reached row: 5000
+0011.909 () Search and replacing table: wp_wfhits: rows: 1399
+0013.079 () Search and replacing table: wp_wfhoover: rows: 0
+0013.080 () Search and replacing table: wp_wfissues: rows: 0
+0013.081 () Search and replacing table: wp_wfknownfilelist: rows: 5994
+0013.926 () Searching and replacing reached row: 5000
+0014.093 () Search and replacing table: wp_wfleechers: rows: 701
+0014.297 () Search and replacing table: wp_wflocs: rows: 0
+0014.298 () Search and replacing table: wp_wflogins: rows: 0
+0014.299 () Search and replacing table: wp_wfnet404s: rows: 0
+0014.300 () Search and replacing table: wp_wfnotifications: rows: 1
+0014.302 () Search and replacing table: wp_wfpendingissues: rows: 0
+0014.303 () Search and replacing table: wp_wfreversecache: rows: 0
+0014.304 () Search and replacing table: wp_wfscanners: rows: 0
+0014.305 () Search and replacing table: wp_wfsnipcache: rows: 0
+0014.306 () Search and replacing table: wp_wfstatus: rows: 312
+0014.383 () Search and replacing table: wp_wfvulnscanners: rows: 0
+0014.402 () Entity: plugins
+0014.402 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:58:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0014.403 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-plugins.zip, 24.5 Mb)
+0099.087 () Moving old data: filesystem method / updraft_dir is potentially possible
+0099.088 () Moving old data: can potentially use wp_filesystem method / -old
+0099.088 () Moving old data out of the way...
+0101.437 () Top-level entities being moved: acf-repeater, advanced-custom-fields, akismet, contact-form-7, custom-post-type-ui, index.php, jetpack, simple-custom-post-order, updraftplus, w3-total-cache, wordpress-seo, wp-video-lightbox
+0101.464 () Moving unpacked backup into place...
+0103.471 () Top-level entities being moved: acf-repeater, advanced-custom-fields, akismet, contact-form-7, custom-post-type-ui, imsanity, jetpack, simple-custom-post-order, updraftplus, w3-total-cache, wordfence, wordpress-seo, wp-video-lightbox
+0103.526 () Cleaning up rubbish...
+0103.528 () [W3 Total Cache] Disabled this plugin: %s: re-activate it manually when you are ready.
+0103.537 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-plugins2.zip, type=plugins, info=a:2:{s:4:"path";s:58:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/plugins";s:11:"description";s:7:"Plugins";}, last_one=)
+0103.538 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-plugins2.zip, 0.4 Mb)
+0104.391 () Moving unpacked backup into place...
+0104.405 () Top-level entities being moved: index.php, wordpress-seo
+0104.460 () Cleaning up rubbish...
+0104.461 () [W3 Total Cache] Disabled this plugin: %s: re-activate it manually when you are ready.
+0104.467 () Entity: themes
+0104.468 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-themes.zip, type=themes, info=a:2:{s:4:"path";s:57:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/themes";s:11:"description";s:6:"Themes";}, last_one=)
+0104.468 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-themes.zip, 1 Mb)
+0106.065 () Moving old data: filesystem method / updraft_dir is potentially possible
+0106.066 () Moving old data: can potentially use wp_filesystem method / -old
+0106.066 () Moving old data out of the way...
+0106.110 () Top-level entities being moved: index.php, seeds-of-health, seeds-of-health.zip, twentyseventeen
+0106.115 () Moving unpacked backup into place...
+0106.160 () Top-level entities being moved: index.php, seeds-of-health, twentyseventeen
+0106.164 () Cleaning up rubbish...
+0106.172 () Entity: uploads
+0106.172 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:58:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content/uploads";s:11:"description";s:7:"Uploads";}, last_one=)
+0106.172 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-uploads.zip, 5.1 Mb)
+0106.521 () Moving old data: filesystem method / updraft_dir is potentially possible
+0106.522 () Moving old data: can potentially use wp_filesystem method / -old
+0106.522 () Moving old data out of the way...
+0106.546 () Moving unpacked backup into place...
+0106.563 () Cleaning up rubbish...
+0106.570 () Entity: others
+0106.570 () restore_backup(backup_file=backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-others.zip, type=others, info=a:2:{s:4:"path";s:50:"C:\wamp64\www\wp-fumbling\wp-lone-local/wp-content";s:11:"description";s:6:"Others";}, last_one=1)
+0106.570 () Unpacking backup... (backup_2018-02-09-2121_Seeds_of_Health_Acupuncture_28f8a111600d-others.zip, 1.6 Mb)
+0107.143 () Cleaning up rubbish...
+0107.143 () Error: Failed to delete working directory after restoring. (C:/wamp64/www/wp-fumbling/wp-lone-local/wp-content/upgrade/a98864db)
+0107.160 () Restore successful!
+0107.161 () Restore successful

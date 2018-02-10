@@ -78,6 +78,11 @@ header.seeds-subtitle-header .inner {
 	text-align: center;
 }
 
+.subhead {
+	font-size: 1.25em;
+	margin-bottom: 1.67em;
+}
+
 .single-featured-image-header {
 	display: none;
 }
@@ -97,13 +102,49 @@ header.seeds-subtitle-header .inner {
 	border-top: 0;
 }
 
+.wpcf7 .form-horizontal label {
+	float: left !important;
+	text-align: left;
+	font-weight: 200;
+	font-size: 14px;
+}
+
+.wpcf7 .form-horizontal input, .wpcf7 .form-horizontal textarea {
+	width: 100% !important;
+	max-width: 100% !important;
+	margin-bottom: 0 !important;
+	border-color: var(--seeds-orange) !important;
+}
+
+.wpcf7 input[type="submit"] {
+	float: right;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: white !important;
+    color: var(--seeds-black) !important;
+    padding: 0.75em 1em;
+    border: solid 2px var(--seeds-orange) !important;
+}
+
+.wpcf7 input[type="submit"]:hover {
+	background-color: var(--seeds-orange) !important;
+    color: white !important;
+}
+
 /* Desktop */
 @media screen and (min-width: 48em) {
 
 	main header .inner, main section .inner {
 		max-width: 1000px;
+		padding: 100px 0;
 		margin: 0 auto;
-		padding: 2em;
+	}
+	
+	section.no-margin .inner {
+		max-width: initial;
+		margin-left: 85px;
+		margin-right: 85px;
+		width: calc(100% - 170px)
 	}
 
 	.social-navigation {
@@ -249,11 +290,19 @@ header.seeds-subtitle-header .inner {
 	}
 }
 
-/* Tablet */
+/* mobile */
 @media screen and ( max-width: 48em ) {
 	.custom-header {
 		margin-bottom: 0px;
 	}
+}
+
+.thank-you .inner {
+	padding: 0;
+	margin: 0 auto;
+	font-size: 0.75em;
+	text-decoration: italic;
+	text-align: center;
 }
 
 .site-branding {
@@ -360,12 +409,67 @@ header.seeds-subtitle-header .inner {
 	opacity:.3;
 }
 
+.seeds-subtitle-header-content .inner {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.seeds-page-template .seeds-subtitle-header-content .inner {
+	padding-bottom: 100px;
+}
+
 .homepage-services {
 	background-color: var(--seeds-orange);
 }
 
-.benefits .header {
+.services-with-prices .inner ul {
+	overflow: hidden;
+}
+
+@media screen and ( min-width: 48em ) {
+	.homepage-services {
+		text-align: left;
+	}
+	
+	.homepage-services h3 {
+		text-align: left;
+		margin-bottom: 0;
+	}
+	
+	.sub-content {
+		text-align: center;
+		font-size: 1.25em;
+	}
+	
+	.treatments-template .services .inner, .services-with-prices .inner {
+		border: dotted 1px var(--seeds-black);
+		border-left: 0;
+		border-right: 0;
+		margin: 50px auto;
+		padding: 50px 0;
+	}
+	
+	.treatments-template .services .inner, .treatments-template .services-with-prices .inner {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+	
+	.services-with-prices .inner ul {
+		width: 500px;
+		margin: 0 auto;
+	}
+}
+
+.benefits .header, .benefits .subhead {
 	text-align: center;
+}
+
+@media screen and ( min-width: 48em ) {
+	.benefits .inner {
+		max-width: 1663px;
+		padding-left: 200px;
+		padding-right: 200px;
+	}
 }
 
 .call-to-action h2 {
@@ -395,17 +499,34 @@ header.seeds-subtitle-header .inner {
 	.call-to-action {
 		height: 312px;
 	}
-
+	
+	.benefits-list {
+		margin-top: 80px;
+	}
+	
 	.benefit {
-		margin-bottom: 1em;
+		margin-bottom: 0;
+	}
+	
+	.benefit img {
+		width: 100%;
+	}
+	
+	.benefit .col-md-4, .benefit .col-md-4 {
+		padding: 0 3px;
 	}
 
 	.benefit h3 {
 		text-align: left;
+		margin-bottom: 0;
 	}
 }
 
 /******** FAQ *********/
+.faq {
+	text-align: left;
+}
+
 .faq .inner {
 	max-width: initial;
 }
@@ -420,6 +541,22 @@ header.seeds-subtitle-header .inner {
     width: 100%;
     text-align: center;
     border: 0;
+}
+
+.faq h4 {
+	text-align: left;
+	color: var(--seeds-red);
+	margin-bottom: 0;
+}
+
+@media screen and ( min-width: 48em ) {  
+	.faq {
+		margin-bottom: 50px;
+	}
+	
+	.faq-footer {
+		height: 315px;
+	}
 }
 
 @media screen and (min-width: 992px) {
@@ -532,6 +669,10 @@ footer.site-footer {
 	margin: 1em;
 }
 
+.social-navigation .icon {
+	color: var(--seeds-brown);
+}
+
 .social-navigation .rainbow {
 	position: relative;
 	top: 10px;
@@ -552,7 +693,7 @@ footer.site-footer {
     width: 100%;
     text-align: center;
     margin: 0;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .site-info a {
@@ -578,10 +719,6 @@ footer.site-footer {
 	text-align: center;
 }
 
-.pregnancy_treatments .inner {
-	max-width: initial;
-}
-
 .pregnancy_treatments h2 {
 	margin-bottom: 0;
 	color: var(--seeds-white);
@@ -595,6 +732,53 @@ footer.site-footer {
 	color: var(--seeds-white);
 }
 
+.treatments-template .testimonials {
+	background: initial;
+}
+
+.personal-publication {
+	background: var(--seeds-orange);
+}
+
+.services-with-prices {
+	font-size: 1.25em;
+}
+
+li.service {
+	padding: 0;
+    margin: 0 0 0 1em;
+    list-style: none;
+}
+
+li.service span {
+	padding-right: 0.33em;
+    background: white;
+}
+
+li.service span + span {
+	float: right;
+	padding-left: 0.33em;
+	padding-right: 0;
+    background: white;
+}
+
+li.service:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .";
+}
+
+li.service ul li {
+	font-size: 0.75em;
+    line-height: 1.4em;
+    margin-left: 1em;
+}
+
+.personal-publication {
+	text-align: center;
+}
+
 @media screen and ( min-width: 48em ) {
 	.pregnancy_treatments {
 		min-height: 360px;
@@ -604,8 +788,15 @@ footer.site-footer {
 /******** TESTIMONIALS ********/
 .testimonials {
 	background: var(--seeds-orange);
+	text-align: center;
+	font-size: 1.25em;
+	line-height: 2em;
 }
 
 .testimonial .patient-name {
 	font-weight: 800;
+}
+
+.testimonial .treatment-received {
+	text-decoration: italic;
 }

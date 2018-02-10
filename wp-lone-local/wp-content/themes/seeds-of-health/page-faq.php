@@ -18,7 +18,7 @@ get_header(); ?>
 			?>
 				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
-				<section class="faq">
+				<section class="faq no-margin">
 					<div class="inner">						
 						<?php
 							$service_args = array(
@@ -29,6 +29,7 @@ get_header(); ?>
 
 							$services = new WP_Query( $service_args );
 
+							global $count;
 							$count = 0;
 			
 							// Start the loop.
@@ -62,6 +63,13 @@ get_header(); ?>
 
 							wp_reset_postdata();
 						?>
+					</div>
+				</section>
+				<?php
+					$call_to_action_image_url = get_field('footer_image')['url'];
+				?>
+				<section class="parallax faq-footer" style="background-image: url('<?php echo $call_to_action_image_url ?>')">
+					<div class="inner">
 					</div>
 				</section>
 

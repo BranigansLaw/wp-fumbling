@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-01-09 08:40:02+0000\n"
+"PO-Revision-Date: 2018-01-24 19:45:56+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,15 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: en_CA\n"
 "Project-Id-Version: Plugins - Yoast SEO - Stable (latest release)\n"
+
+#: languages/yoast-seo-js.php:212
+msgid "The focus keyword appears in %2$d (out of %1$d) subheadings in your copy."
+msgstr "The focus keyword appears in %2$d (out of %1$d) subheadings in your copy."
+
+#. translators: %s expands to Yoast SEO Premium.
+#: admin/class-social-admin.php:181
+msgid "Find out why you should upgrade to %s"
+msgstr "Find out why you should upgrade to %s"
 
 #. Author URI of the plugin/theme
 msgid "https://yoa.st/1uk"
@@ -999,6 +1008,10 @@ msgstr "Available variables"
 msgid "Scroll to see the table content."
 msgstr "Scroll to see the table content."
 
+#: admin/banner/class-admin-banner-sidebar.php:351
+msgid "Take the online Technical SEO Training course and learn essential technical SEO-concepts!"
+msgstr "Take the online Technical SEO Training course and learn essential technical SEO-concepts!"
+
 #. Translators: %1$s opens a link to a Yoast article about stop words, %2$s
 #. closes the link
 #: languages/yoast-seo-js.php:164
@@ -1006,10 +1019,6 @@ msgid "The focus keyword contains a stop word. This may or may not be wise depen
 msgid_plural "The focus keyword contains %3$d stop words. This may or may not be wise depending on the circumstances. %1$sLearn more about the stop words%2$s."
 msgstr[0] "The focus keyword contains a stop word. This may or may not be wise depending on the circumstances. %1$sLearn more about the stop words%2$s."
 msgstr[1] "The focus keyword contains %3$d stop words. This may or may not be wise depending on the circumstances. %1$sLearn more about the stop words%2$s."
-
-#: admin/banner/class-admin-banner-sidebar.php:351
-msgid "Take the online Technical SEO Training course and learn essential technical SEO-concepts!"
-msgstr "Take the online Technical SEO Training course and learn essential technical SEO-concepts!"
 
 #. translators: %1$s will be a link to a review explanation page. Text between
 #. %2$s and %3$s will be a link to an SEO copywriting course page.
@@ -1140,16 +1149,6 @@ msgid_plural "This is below the recommended minimum of %2$d words. Add more cont
 msgstr[0] "This is below the recommended minimum of %2$d word. Add more content that is relevant for the topic."
 msgstr[1] "This is below the recommended minimum of %2$d words. Add more content that is relevant for the topic."
 
-#. Translators: The preceding sentence is "The text contains x words.", %2$s
-#. expands to the recommended minimum of words. 	   Translators: The preceding
-#. sentence is "The text contains x words.", %2$s expands to the recommended
-#. minimum of words
-#: languages/yoast-seo-js.php:252
-msgid "This is far below the recommended minimum of %2$d word. Add more content that is relevant for the topic."
-msgid_plural "This is far below the recommended minimum of %2$d words. Add more content that is relevant for the topic."
-msgstr[0] "This is far below the recommended minimum of %2$d word. Add more content that is relevant for the topic."
-msgstr[1] "This is far below the recommended minimum of %2$d words. Add more content that is relevant for the topic."
-
 #: languages/yoast-seo-js.php:273
 msgid "The focus keyword '%1$s' does not appear in the SEO title."
 msgstr "The focus keyword '%1$s' does not appear in the SEO title."
@@ -1184,6 +1183,16 @@ msgstr[1] "The slug for this page contains %1$sstop words%2$s, consider removing
 msgid "%1$s of the words contain %2$sover %3$s syllables%4$s, which is less than or equal to the recommended maximum of %5$s."
 msgstr "%1$s of the words contain %2$sover %3$s syllables%4$s, which is less than or equal to the recommended maximum of %5$s."
 
+#. Translators: The preceding sentence is "The text contains x words.", %2$s
+#. expands to the recommended minimum of words. 	   Translators: The preceding
+#. sentence is "The text contains x words.", %2$s expands to the recommended
+#. minimum of words
+#: languages/yoast-seo-js.php:252
+msgid "This is far below the recommended minimum of %2$d word. Add more content that is relevant for the topic."
+msgid_plural "This is far below the recommended minimum of %2$d words. Add more content that is relevant for the topic."
+msgstr[0] "This is far below the recommended minimum of %2$d word. Add more content that is relevant for the topic."
+msgstr[1] "This is far below the recommended minimum of %2$d words. Add more content that is relevant for the topic."
+
 #. Translators: %1$s expands to the percentage of complex words, %2$s expands
 #. to a link on yoast.com, 	   %3$d expands to the recommended maximum number
 #. of syllables, 	   %4$s expands to the anchor end tag, %5$s expands to the
@@ -1205,13 +1214,13 @@ msgid_plural "%1$d of the subheadings are followed by more than the recommended 
 msgstr[0] "%1$d subheading is followed by more than the recommended maximum of %2$d words. Try to insert another subheading."
 msgstr[1] "%1$d of the subheadings are followed by more than the recommended maximum of %2$d words. Try to insert additional subheadings."
 
-#: admin/class-bulk-editor-list-table.php:893
-msgid "Save all"
-msgstr "Save all"
-
 #: admin/class-bulk-editor-list-table.php:892
 msgid "Save"
 msgstr "Save"
+
+#: admin/class-bulk-editor-list-table.php:893
+msgid "Save all"
+msgstr "Save all"
 
 #: admin/views/partial-alerts-warnings.php:11
 msgid "No new notifications."
@@ -2098,13 +2107,6 @@ msgstr "View credits"
 msgid "Go Premium"
 msgstr "Go Premium"
 
-#. translators: %1$s expands to Yoast SEO
-#: admin/pages/dashboard.php:45
-msgid "The following file is blocking your XML sitemaps from working properly. Either delete it (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
-msgid_plural "The following files are blocking your XML sitemaps from working properly. Either delete them (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
-msgstr[0] "The following file is blocking your XML sitemaps from working properly. Either delete it (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
-msgstr[1] "The following files are blocking your XML sitemaps from working properly. Either delete them (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
-
 #: admin/google_search_console/views/gsc-display.php:112
 msgid "Crawl issues list"
 msgstr "Crawl issues list"
@@ -2117,6 +2119,13 @@ msgstr "Crawl issues list navigation"
 #: admin/class-bulk-editor-list-table.php:813
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Edit &#8220;%s&#8221;"
+
+#. translators: %1$s expands to Yoast SEO
+#: admin/pages/dashboard.php:45
+msgid "The following file is blocking your XML sitemaps from working properly. Either delete it (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
+msgid_plural "The following files are blocking your XML sitemaps from working properly. Either delete them (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
+msgstr[0] "The following file is blocking your XML sitemaps from working properly. Either delete it (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
+msgstr[1] "The following files are blocking your XML sitemaps from working properly. Either delete them (this can be done with the \"Fix it\" button) or disable %1$s XML sitemaps."
 
 #: admin/class-bulk-editor-list-table.php:425
 msgid "Filter by post type"
@@ -3854,6 +3863,16 @@ msgstr "You don't have a %s file, create one here:"
 msgid "Import settings by locating %1$ssettings.zip%2$s and clicking \"Import settings\""
 msgstr "Import settings by locating %1$ssettings.zip%2$s and clicking \"Import settings\""
 
+#. translators: 1: <strong> open tag; 2: close tag.
+#: admin/views/tabs/sitemaps/general.php:26
+msgid "You do %1$snot%2$s need to generate the XML sitemap, nor will it take up time to generate after publishing a post."
+msgstr "You do %1$snot%2$s need to generate the XML sitemap, nor will it take up time to generate after publishing a post."
+
+#. translators: 1: emphasis open tag; 2: emphasis close tag.
+#: admin/views/tabs/advanced/permalinks.php:39
+msgid "This prevents threaded replies from working when the user has JavaScript disabled, but on a large site can mean a %1$shuge%2$s improvement in crawl efficiency for search engines when you have a lot of comments."
+msgstr "This prevents threaded replies from working when the user has JavaScript disabled, but on a large site can mean a %1$shuge%2$s improvement in crawl efficiency for search engines when you have a lot of comments."
+
 #: admin/views/tabs/metas/post-types.php:81
 #: admin/views/tabs/social/facebook.php:33 admin/views/tool-bulk-editor.php:77
 msgid "Title"
@@ -4492,10 +4511,6 @@ msgstr "Access denied"
 msgid "Debug Information"
 msgstr "Debug Information"
 
-#: languages/yoast-seo-js.php:173
-msgid "No meta description has been specified. Search engines will display copy from the page instead."
-msgstr "No meta description has been specified. Search engines will display copy from the page instead."
-
 #: admin/banner/class-admin-banner-sidebar.php:376
 msgid "Remove these ads?"
 msgstr "Remove these ads?"
@@ -4732,6 +4747,10 @@ msgstr "SEO: Good"
 #: inc/class-wpseo-rank.php:122
 msgid "SEO: Post Noindexed"
 msgstr "SEO: Post Noindexed"
+
+#: languages/yoast-seo-js.php:173
+msgid "No meta description has been specified. Search engines will display copy from the page instead."
+msgstr "No meta description has been specified. Search engines will display copy from the page instead."
 
 #. translators: %1$s and %2$s expand to a link to Facebook Insights
 #: admin/class-social-facebook-form.php:75

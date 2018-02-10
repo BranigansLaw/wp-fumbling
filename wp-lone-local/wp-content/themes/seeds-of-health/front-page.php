@@ -21,19 +21,30 @@ get_header(); ?>
 			?>
 				<?php get_template_part( 'template-parts/header/page', 'header' ); ?>
 
-				<section class="homepage-services">
+				<section class="thank-you">
 					<div class="inner services-list row">
+						<div class="extra-content">
+							<?php the_field( 'content_extra' ) ?>
+						</div>
+					</div>
+				</section>
+				<section class="services-with-prices">
+					<div class="inner services-list row">
+						<h3>
+							Our Services
+						</h3>
+						<ul>
 						<?php 
-							$services = get_field( 'services' );
+							$services = get_field( 'service_with_prices_listed' );
 
 							if ( $services ) {
 
 								foreach( $services as $post ) : setup_postdata( $post ); 
 						?>
 
-						<div class="col-md-4">
+						<div>
 
-									<?php get_template_part( 'template-parts/service/service-single', 'display' ); ?>
+									<?php get_template_part( 'template-parts/service/service-single', 'prices' ); ?>
 
 						</div>
 
@@ -44,6 +55,52 @@ get_header(); ?>
 								wp_reset_postdata();
 							}
 						?>
+						</ul>
+					</div>					
+				</section>
+				<section class="homepage-services no-margin">
+					<div class="inner services-list row">
+						<?php 
+							$services = get_field( 'services' );
+
+							if ( $services ) {
+								
+								$count = 0;
+
+								foreach( $services as $post ) : setup_postdata( $post ); 
+						?>
+						
+						<?php if ( $count % 3 == 0 ) : ?>
+							
+							<div class="row">
+								
+						<?php endif; ?>
+
+								<div class="col-md-4">
+
+											<?php get_template_part( 'template-parts/service/service-single', 'display' ); ?>
+
+								</div>
+								
+						<?php if ( $count % 3 == 2 ) : ?>
+							
+							</div>
+								
+						<?php endif; ?>
+
+
+						<?php
+								
+								$count++;
+								
+								endforeach;
+
+								wp_reset_postdata();
+							}
+						?>
+						<div class="sub-content">
+							<?php the_field( 'services_sub_field' ) ?>
+						</div>
 					</div>
 				</section>
 				<?php
@@ -63,13 +120,14 @@ get_header(); ?>
 				<section class="benefits">
 					<div class="inner">
 						<h2><?php the_field( 'benefits_title' ) ?></h2>
-						<p class="header"><?php the_field( 'benefits_subtitle' ) ?></p>
+						<p class="subhead"><?php the_field( 'benefits_subtitle' ) ?></p>
+						<div class="benefits-list">
 						<?php 
 							if ( have_rows( 'benefits' ) ) : 
 								while ( have_rows('benefits') ) : the_row();
 						?>
 								<div class="benefit row">
-									<div class="col-md-3">
+									<div class="col-md-4">
 										<?php 
 											$image = get_sub_field( 'benefit_image' );
 											$size = 'medium';
@@ -81,7 +139,7 @@ get_header(); ?>
 											}
 										?>
 									</div>
-									<div class="col-md-9">
+									<div class="col-md-8">
 										<h3><?php the_sub_field( 'benefit_title') ?></h3>
 										<p>
 											<?php the_sub_field( 'benefit_description' ) ?>
@@ -93,6 +151,7 @@ get_header(); ?>
 								endwhile;
 							endif;
 						?>
+						</div>
 					</div>
 				</section>
 				<section class="testimonials">
@@ -141,7 +200,7 @@ get_header(); ?>
 					<div class="inner">
 						<div class="parallax-content">
 							<h2><?php echo $bottom_call_to_action_title ?></h2>
-							<h4><?php echo $bottom_call_to_action_text ?></h4>
+							<!--<h4><?php echo $bottom_call_to_action_text ?></h4>-->
 							<a href="<?php echo $bottom_call_to_action_targer ?>" class="btn btn-lg btn-primary">
 								<?php echo $bottom_call_to_action_button_text ?>
 							</a>

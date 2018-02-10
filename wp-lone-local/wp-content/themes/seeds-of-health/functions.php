@@ -9,7 +9,9 @@ function theme_enqueue_styles() {
 
     	wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css', array('bootstrap') );
 
-		wp_enqueue_style( 'twentyseventeen-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.10' );
+		wp_dequeue_style( 'twentyseventeen-style-css' );
+		wp_dequeue_style( 'twentyseventeen-style' );
+		wp_enqueue_style( 'seeds-style', get_stylesheet_directory_uri() . '/style.css', array( $parent_style ), '1.0.13' );
 
     	wp_enqueue_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300%7CSource+Sans+Pro%7COpen+Sans%7CFjord+One%7COpen+Sans:700%7COpen+Sans:600%7CFjord+One:300%7CFjord+One:600' );
 
@@ -29,7 +31,6 @@ function enqueue_my_scripts() {
 
 	// Register theme JavaScript
 	wp_enqueue_script( 'seeds-of-health-js', get_stylesheet_directory_uri() . '/js/seeds-of-health.js', array('bootstrap-js'), '1.0.4', true);
-
 
 	if ( is_front_page() ) {
 	 	// Register the slider
